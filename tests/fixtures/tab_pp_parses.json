@@ -1,0 +1,109 @@
+[
+ {
+  "tab_id": "tab-pp-000",
+  "reading": "np_attach",
+  "item_index": 1,
+  "id_line": "ID=prompts.1 PARSER=HOLCCG NUMPARSE=1",
+  "derivation": "(<T S[dcl] 1 2> (<T NP 1 2> (<L NP[nb]/N POS POS The NP[nb]/N>) (<L N POS POS girl N>) ) (<T S[dcl]\\NP 0 2> (<L S[dcl]\\NP POS POS stands S[dcl]\\NP>) (<T (S\\NP)\\(S\\NP) 0 2> (<L ((S\\NP)\\(S\\NP))/PP POS POS next ((S\\NP)\\(S\\NP))/PP>) (<T PP 0 2> (<L PP/NP POS POS to PP/NP>) (<T NP 0 2> (<T NP 1 2> (<L NP[nb]/N POS POS the NP[nb]/N>) (<L N POS POS cage N>) ) (<T NP\\NP 0 2> (<L (NP\\NP)/NP POS POS with (NP\\NP)/NP>) (<T NP 1 2> (<L NP[nb]/N POS POS a NP[nb]/N>) (<L N POS POS dog N>) ) ) ) ) ) ) )",
+  "dependencies": [
+   "stands_3 (S[dcl]{_}\\NP{Y}<1>){_} 1 girl_2 0",
+   "The_1 (NP[nb]{Y}/N{Y}<1>){_} 1 girl_2 0",
+   "next_4 (((S[X]{Y}\\NP{Z}){Y}\\(S[X]{Y}<1>\\NP{Z}){Y}){_}/PP{W}<2>){_} 1 stands_3 0",
+   "next_4 (((S[X]{Y}\\NP{Z}){Y}\\(S[X]{Y}<1>\\NP{Z}){Y}){_}/PP{W}<2>){_} 2 to_5 0",
+   "to_5 (PP{_}/NP{Y}<1>){_} 1 cage_7 0",
+   "with_8 ((NP{Y}\\NP{Y}<1>){_}/NP{Z}<2>){_} 1 cage_7 0",
+   "the_6 (NP[nb]{Y}/N{Y}<1>){_} 1 cage_7 0",
+   "with_8 ((NP{Y}\\NP{Y}<1>){_}/NP{Z}<2>){_} 2 dog_10 0",
+   "a_9 (NP[nb]{Y}/N{Y}<1>){_} 1 dog_10 0"
+  ]
+ },
+ {
+  "tab_id": "tab-pp-000",
+  "reading": "vp_attach",
+  "item_index": 1,
+  "id_line": "ID=prompts.1 PARSER=HOLCCG NUMPARSE=1",
+  "derivation": "(<T S[dcl] 1 2> (<T NP 1 2> (<L NP[nb]/N POS POS The NP[nb]/N>) (<L N POS POS girl N>) ) (<T S[dcl]\\NP 0 2> (<T S[dcl]\\NP 0 2> (<L S[dcl]\\NP POS POS stands S[dcl]\\NP>) (<T (S\\NP)\\(S\\NP) 0 2> (<L ((S\\NP)\\(S\\NP))/PP POS POS next ((S\\NP)\\(S\\NP))/PP>) (<T PP 0 2> (<L PP/NP POS POS to PP/NP>) (<T NP 1 2> (<L NP[nb]/N POS POS the NP[nb]/N>) (<L N POS POS cage N>) ) ) ) ) (<T (S\\NP)\\(S\\NP) 0 2> (<L ((S\\NP)\\(S\\NP))/NP POS POS with ((S\\NP)\\(S\\NP))/NP>) (<T NP 1 2> (<L NP[nb]/N POS POS a NP[nb]/N>) (<L N POS POS dog N>) ) ) ) )",
+  "dependencies": [
+   "stands_3 (S[dcl]{_}\\NP{Y}<1>){_} 1 girl_2 0",
+   "The_1 (NP[nb]{Y}/N{Y}<1>){_} 1 girl_2 0",
+   "with_8 (((S[X]{Y}\\NP{Z}){Y}\\(S[X]{Y}<1>\\NP{Z}){Y}){_}/NP{W}<2>){_} 1 stands_3 0",
+   "next_4 (((S[X]{Y}\\NP{Z}){Y}\\(S[X]{Y}<1>\\NP{Z}){Y}){_}/PP{W}<2>){_} 1 stands_3 0",
+   "next_4 (((S[X]{Y}\\NP{Z}){Y}\\(S[X]{Y}<1>\\NP{Z}){Y}){_}/PP{W}<2>){_} 2 to_5 0",
+   "to_5 (PP{_}/NP{Y}<1>){_} 1 cage_7 0",
+   "the_6 (NP[nb]{Y}/N{Y}<1>){_} 1 cage_7 0",
+   "with_8 (((S[X]{Y}\\NP{Z}){Y}\\(S[X]{Y}<1>\\NP{Z}){Y}){_}/NP{W}<2>){_} 2 dog_10 0",
+   "a_9 (NP[nb]{Y}/N{Y}<1>){_} 1 dog_10 0"
+  ]
+ },
+ {
+  "tab_id": "tab-pp-021",
+  "reading": "np_attach",
+  "item_index": 22,
+  "id_line": "ID=prompts.22 PARSER=HOLCCG NUMPARSE=1",
+  "derivation": "(<T NP 0 2> (<T NP 0 2> (<T NP 1 2> (<L NP[nb]/N POS POS The NP[nb]/N>) (<L N POS POS girl N>) ) (<T NP\\NP 0 1> (<T S[ng]\\NP 0 2> (<L S[ng]\\NP POS POS standing S[ng]\\NP>) (<T (S\\NP)\\(S\\NP) 0 2> (<L ((S\\NP)\\(S\\NP))/PP POS POS next ((S\\NP)\\(S\\NP))/PP>) (<T PP 0 2> (<L PP/NP POS POS to PP/NP>) (<T NP 1 2> (<L NP[nb]/N POS POS the NP[nb]/N>) (<L N POS POS desk N>) ) ) ) ) ) ) (<T N\\N 0 2> (<L (N\\N)/NP POS POS with (N\\N)/NP>) (<T NP 1 2> (<L NP[nb]/N POS POS a NP[nb]/N>) (<T N 1 2> (<L N/N POS POS blue N/N>) (<L N POS POS book N>) ) ) ) )",
+  "dependencies": [
+   "standing_3 (S[ng]{_}\\NP{Y}<1>){_} 1 girl_2 3",
+   "The_1 (NP[nb]{Y}/N{Y}<1>){_} 1 girl_2 0",
+   "next_4 (((S[X]{Y}\\NP{Z}){Y}\\(S[X]{Y}<1>\\NP{Z}){Y}){_}/PP{W}<2>){_} 1 standing_3 0",
+   "next_4 (((S[X]{Y}\\NP{Z}){Y}\\(S[X]{Y}<1>\\NP{Z}){Y}){_}/PP{W}<2>){_} 2 to_5 0",
+   "to_5 (PP{_}/NP{Y}<1>){_} 1 desk_7 0",
+   "the_6 (NP[nb]{Y}/N{Y}<1>){_} 1 desk_7 0",
+   "with_8 ((N{Y}\\N{Y}<1>){_}/NP{Z}<2>){_} 2 book_11 0",
+   "a_9 (NP[nb]{Y}/N{Y}<1>){_} 1 book_11 0",
+   "blue_10 (N{Y}/N{Y}<1>){_} 1 book_11 0"
+  ]
+ },
+ {
+  "tab_id": "tab-pp-021",
+  "reading": "vp_attach",
+  "item_index": 22,
+  "id_line": "ID=prompts.22 PARSER=HOLCCG NUMPARSE=1",
+  "derivation": "(<T NP 0 2> (<T NP 1 2> (<L NP[nb]/N POS POS The NP[nb]/N>) (<L N POS POS girl N>) ) (<T NP\\NP 0 1> (<T S[ng]\\NP 0 2> (<T S[ng]\\NP 0 2> (<L S[ng]\\NP POS POS standing S[ng]\\NP>) (<T (S\\NP)\\(S\\NP) 0 2> (<L ((S\\NP)\\(S\\NP))/PP POS POS next ((S\\NP)\\(S\\NP))/PP>) (<T PP 0 2> (<L PP/NP POS POS to PP/NP>) (<T NP 1 2> (<L NP[nb]/N POS POS the NP[nb]/N>) (<L N POS POS desk N>) ) ) ) ) (<T (S\\NP)\\(S\\NP) 0 2> (<L ((S\\NP)\\(S\\NP))/NP POS POS with ((S\\NP)\\(S\\NP))/NP>) (<T NP 1 2> (<L NP[nb]/N POS POS a NP[nb]/N>) (<T N 1 2> (<L N/N POS POS blue N/N>) (<L N POS POS book N>) ) ) ) ) ) )",
+  "dependencies": [
+   "standing_3 (S[ng]{_}\\NP{Y}<1>){_} 1 girl_2 3",
+   "The_1 (NP[nb]{Y}/N{Y}<1>){_} 1 girl_2 0",
+   "with_8 (((S[X]{Y}\\NP{Z}){Y}\\(S[X]{Y}<1>\\NP{Z}){Y}){_}/NP{W}<2>){_} 1 standing_3 0",
+   "next_4 (((S[X]{Y}\\NP{Z}){Y}\\(S[X]{Y}<1>\\NP{Z}){Y}){_}/PP{W}<2>){_} 1 standing_3 0",
+   "next_4 (((S[X]{Y}\\NP{Z}){Y}\\(S[X]{Y}<1>\\NP{Z}){Y}){_}/PP{W}<2>){_} 2 to_5 0",
+   "to_5 (PP{_}/NP{Y}<1>){_} 1 desk_7 0",
+   "the_6 (NP[nb]{Y}/N{Y}<1>){_} 1 desk_7 0",
+   "with_8 (((S[X]{Y}\\NP{Z}){Y}\\(S[X]{Y}<1>\\NP{Z}){Y}){_}/NP{W}<2>){_} 2 book_11 0",
+   "a_9 (NP[nb]{Y}/N{Y}<1>){_} 1 book_11 0",
+   "blue_10 (N{Y}/N{Y}<1>){_} 1 book_11 0"
+  ]
+ },
+ {
+  "tab_id": "tab-pp-037",
+  "reading": "np_attach",
+  "item_index": 38,
+  "id_line": "ID=prompts.38 PARSER=HOLCCG NUMPARSE=1",
+  "derivation": "(<T S[dcl] 1 2> (<T NP 1 2> (<L NP[nb]/N POS POS The NP[nb]/N>) (<L N POS POS girl N>) ) (<T S[dcl]\\NP 0 2> (<L (S[dcl]\\NP)/NP POS POS leaves (S[dcl]\\NP)/NP>) (<T NP 0 2> (<T NP 1 2> (<L NP[nb]/N POS POS the NP[nb]/N>) (<L N POS POS chair N>) ) (<T NP\\NP 0 2> (<L (NP\\NP)/NP POS POS with (NP\\NP)/NP>) (<T NP 1 2> (<L NP[nb]/N POS POS a NP[nb]/N>) (<T N 1 2> (<L N/N POS POS green N/N>) (<L N POS POS bag N>) ) ) ) ) ) )",
+  "dependencies": [
+   "leaves_3 ((S[dcl]{_}\\NP{Y}<1>){_}/NP{Z}<2>){_} 1 girl_2 0",
+   "The_1 (NP[nb]{Y}/N{Y}<1>){_} 1 girl_2 0",
+   "leaves_3 ((S[dcl]{_}\\NP{Y}<1>){_}/NP{Z}<2>){_} 2 chair_5 0",
+   "with_6 ((NP{Y}\\NP{Y}<1>){_}/NP{Z}<2>){_} 1 chair_5 0",
+   "the_4 (NP[nb]{Y}/N{Y}<1>){_} 1 chair_5 0",
+   "with_6 ((NP{Y}\\NP{Y}<1>){_}/NP{Z}<2>){_} 2 bag_9 0",
+   "a_7 (NP[nb]{Y}/N{Y}<1>){_} 1 bag_9 0",
+   "green_8 (N{Y}/N{Y}<1>){_} 1 bag_9 0"
+  ]
+ },
+ {
+  "tab_id": "tab-pp-037",
+  "reading": "vp_attach",
+  "item_index": 38,
+  "id_line": "ID=prompts.38 PARSER=HOLCCG NUMPARSE=1",
+  "derivation": "(<T S[dcl] 1 2> (<T NP 1 2> (<L NP[nb]/N POS POS The NP[nb]/N>) (<L N POS POS girl N>) ) (<T S[dcl]\\NP 0 2> (<T S[dcl]\\NP 0 2> (<L (S[dcl]\\NP)/NP POS POS leaves (S[dcl]\\NP)/NP>) (<T NP 1 2> (<L NP[nb]/N POS POS the NP[nb]/N>) (<L N POS POS chair N>) ) ) (<T (S\\NP)\\(S\\NP) 0 2> (<L ((S\\NP)\\(S\\NP))/NP POS POS with ((S\\NP)\\(S\\NP))/NP>) (<T NP 1 2> (<L NP[nb]/N POS POS a NP[nb]/N>) (<T N 1 2> (<L N/N POS POS green N/N>) (<L N POS POS bag N>) ) ) ) ) )",
+  "dependencies": [
+   "leaves_3 ((S[dcl]{_}\\NP{Y}<1>){_}/NP{Z}<2>){_} 1 girl_2 0",
+   "The_1 (NP[nb]{Y}/N{Y}<1>){_} 1 girl_2 0",
+   "with_6 (((S[X]{Y}\\NP{Z}){Y}\\(S[X]{Y}<1>\\NP{Z}){Y}){_}/NP{W}<2>){_} 1 leaves_3 0",
+   "leaves_3 ((S[dcl]{_}\\NP{Y}<1>){_}/NP{Z}<2>){_} 2 chair_5 0",
+   "the_4 (NP[nb]{Y}/N{Y}<1>){_} 1 chair_5 0",
+   "with_6 (((S[X]{Y}\\NP{Z}){Y}\\(S[X]{Y}<1>\\NP{Z}){Y}){_}/NP{W}<2>){_} 2 bag_9 0",
+   "a_7 (NP[nb]{Y}/N{Y}<1>){_} 1 bag_9 0",
+   "green_8 (N{Y}/N{Y}<1>){_} 1 bag_9 0"
+  ]
+ }
+]

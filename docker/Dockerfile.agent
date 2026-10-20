@@ -1,0 +1,51 @@
+# Optional agent image: the runtime image (docker/Dockerfile) plus in-container
+# tooling for coding agents: tmux, sudo, Node.js 22, the Notion MCP server,
+# Claude Code and the Codex CLI. None of it is needed to use or reproduce CCG
+# Diffusion; it is opt-in through docker-compose.override.yml (see
+# docker-compose.override.example.yml). BASE_IMAGE must be the runtime image
+# that docker-compose.yml builds (${IMAGE_NAME}, default ccg-diffusion:runtime).
+# No credential is baked into the image: docker/entrypoint.agent.sh reads the
+# tokens from the environment at start.
+ARG BASE_IMAGE=ccg-diffusion:runtime
+FROM ${BASE_IMAGE} AS agent
+
+USER root
+RUN apt-get update && apt-get install -y net-tools tmux sudo && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# Node.js 22 (needed by the Notion MCP server and the npm fallback of the Codex CLI).
+RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - && \
+    apt-get install -y nodejs && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# devuser is the host-UID user of the runtime image.
+RUN echo "devuser ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/devuser && \
+    chmod 0440 /etc/sudoers.d/devuser
+
+COPY docker/entrypoint.agent.sh /entrypoint.agent.sh
+RUN chmod +x /entrypoint.agent.sh && \
+    printf 'set -g mouse on\nset -g history-limit 50000\n' > /home/devuser/.tmux.conf && \
+    mkdir -p /home/devuser/.npm-global && \
+    chown devuser: /home/devuser/.tmux.conf /home/devuser/.npm-global
+
+USER devuser
+
+RUN npm config set prefix /home/devuser/.npm-global && \
+    npm install -g @notionhq/notion-mcp-server
+
+RUN curl -fsSL https://claude.ai/install.sh | bash
+
+# Codex CLI: the standalone installer, or npm when it is unavailable.
+RUN set -e; \
+    export PATH="/home/devuser/.local/bin:/home/devuser/.npm-global/bin:${PATH}"; \
+    if curl -fsSL https://chatgpt.com/codex/install.sh -o /tmp/codex-install.sh; then \
+        CODEX_NON_INTERACTIVE=1 sh /tmp/codex-install.sh \
+            || { echo "Codex standalone install failed; falling back to npm."; npm install -g @openai/codex; }; \
+    else \
+        echo "Codex standalone installer download failed; falling back to npm."; \
+        npm install -g @openai/codex; \
+    fi; \
+    rm -f /tmp/codex-install.sh; \
+    codex --version
+
+ENV PATH="/home/devuser/.local/bin:/home/devuser/.npm-global/bin:${PATH}"

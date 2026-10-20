@@ -1,0 +1,69 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+/build/
+/dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+.venv-*/
+venv/
+
+# IDE / editor
+.idea/
+.vscode/
+.history/
+
+# OS
+.DS_Store
+
+# Secrets / personal settings
+.env
+docker-compose.override.yml
+
+# Coding-agent local state and private instructions
+.claude/
+CLAUDE.local.md
+
+# External tools and environments built by scripts/setup/ (the official
+# T2I-CompBench++ clone and its venv, the baseline adapter venv, Stanza resources)
+/external/
+
+# Datasets: dataset/derived/ holds the tracked frozen datasets; everything else
+# under dataset/ is a downloaded official source (e.g. dataset/tab/official/,
+# written by scripts/data/prepare_tab_pp_benchmark.py) or a local copy.
+/dataset/*
+!/dataset/.gitkeep
+!/dataset/derived/
+
+# Run outputs: every command writes under output/ (output/generation/<run_id>/,
+# output/vqa/<run_id>/, output/analysis/<topic>/), and all of it is ignored.
+# The only tracked files are nine frozen inputs that the code reads: the
+# T2I-CompBench++ source pin (its sha256 is pinned by the dataset contract) and
+# the Stage 1 metadata of the frozen T2I-CompBench++ parse bundle (data/t2i_compbench/).
+/output/*
+!/output/analysis/
+/output/analysis/*
+!/output/analysis/t2i_compbench/
+/output/analysis/t2i_compbench/*
+!/output/analysis/t2i_compbench/t2icb_source_pin.json
+!/output/generation/
+/output/generation/*
+!/output/generation/20260812_t2icb_sd14_six_arm_full_v1/
+/output/generation/20260812_t2icb_sd14_six_arm_full_v1/*
+!/output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/
+/output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/*
+!/output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/
+/output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/*
+!/output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/3d_spatial.auto.meta.json
+!/output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/color.auto.meta.json
+!/output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/complex.auto.meta.json
+!/output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/non_spatial.auto.meta.json
+!/output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/numeracy.auto.meta.json
+!/output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/shape.auto.meta.json
+!/output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/spatial.auto.meta.json
+!/output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/texture.auto.meta.json

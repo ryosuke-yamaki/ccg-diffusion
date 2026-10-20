@@ -1,0 +1,33 @@
+# Python pins of the CCG Diffusion runtime (docker/Dockerfile; pyproject.toml lists the same runtime pins).
+#
+# The first block mirrors the exact pins declared by hol-ccg v1.0.0
+# (commit 0213ca85, `pip show holccg`), so that the pinned holccg install in
+# docker/Dockerfile finds every requirement already satisfied.
+# torch / torchvision are deliberately absent: they come from the
+# download.pytorch.org cu129 index (see docker/Dockerfile), because the PyPI
+# default builds target CUDA 13 and require driver >= 580.
+
+# --- holccg v1.0.0 official pin set (+ transformers v5 companions) ---
+transformers==5.14.1
+tokenizers==0.22.2
+huggingface_hub==1.24.0
+safetensors>=0.8.0
+numpy==2.5.1
+nltk==3.10.0
+tqdm==4.69.0
+omegaconf==2.3.1
+spacy==3.8.14
+wandb==0.28.1
+
+# --- CCG Diffusion stack ---
+diffusers==0.39.0
+accelerate>=1.14
+scipy>=1.16
+hydra-core==1.3.2
+openai==1.71.0
+pydantic==2.10.3
+imageio==2.34.2
+
+# --- lint / format ---
+autopep8==2.3.1
+flake8==7.1.0

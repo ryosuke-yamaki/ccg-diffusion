@@ -1,0 +1,65 @@
+#############################
+# Stage 1: Hol-CCG parsing of a tokenized corpus (.raw -> .auto)
+# - Input: one tokenized sentence per line (.raw)
+# - Output: CCGbank-style AUTO (2 lines per sentence) and <auto>.meta.json
+# The `parsing` block equals the parse contract
+# ccg_diffusion.config.HOLCCG_PARSE (a test keeps the two equal).
+#############################
+
+# Hol-CCG checkpoint: a Hugging Face repo id (resolved through the HF cache at
+# `model_revision`) or a local directory saved by HolCCG.save_pretrained.
+model_dir: ryosuke-yamaki/hol-ccg-roberta-large
+model_revision: 1888cd6343d8df52cf871e1a86924f500a6d7b6b
+
+input:
+  encoding: utf-8
+  skip_empty: true
+
+# Both paths are passed on the command line (--input-raw-path / --output-auto-path).
+input_raw_path: null
+output_auto_path: null
+
+# Sentence IDs are ID=<prefix>.<index>; a null prefix uses the stem of input_raw_path.
+id:
+  prefix: null
+  start: 1
+
+parsing:
+  # Supertag, phrase-category and span-existence thresholds of the CKY search.
+  stag_threshold: 0.01
+  phrase_threshold: 0.001
+  span_threshold: 0.001
+
+  # When no complete parse exists, keep the skimmer's fragments under a PARTIAL root.
+  apply_skimmer: true
+
+  # Keep grammar rules seen at least min_rule_freq times.
+  min_rule_freq: 1
+
+  # CKY grammar: "treebank" uses the checkpoint's own binary_rule table (every
+  # recorded parse); "candc" uses the C&C rule port shipped with holccg.
+  grammar: treebank
+
+  # Sentences per batched supertag/CKY call. 1 gives every sentence its own
+  # encoder pass and is the only value that cannot alter a parse: batching pads
+  # sentences together and the float differences flip near-tie supertags.
+  chunk_size: 1
+
+output:
+  parser_name: HOLCCG
+
+  # Synthetic root of combined skimmer fragments (status partial).
+  partial_root_cat: PARTIAL
+
+  # Root and leaf POS of the right-branching fallback tree of a failed parse.
+  fail_root_cat: FAIL
+  fail_pos: POS
+
+  # Root of sentences whose sub-word tokenization would exceed the encoder's
+  # positional limit; they are not parsed and Stage 2 counts them as failures.
+  overlen_root_cat: OVERLEN
+
+runtime:
+  device: cuda   # cuda | cuda:0 | cpu
+  max_sentences: null
+  progress: true

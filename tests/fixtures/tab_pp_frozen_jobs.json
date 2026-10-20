@@ -1,0 +1,1590 @@
+[
+ {
+  "arm": "c1r1p0m0",
+  "condition": "20260925_sd14_tab_pp_ablation_v1:c1r1p0m0",
+  "effective_sha256": "6e39b6d8ec2a5f49213b1741018c93441f7585c415a4b1718d8d2262d445612a",
+  "evaluation_setup_indices": [
+   0
+  ],
+  "followup_trace": {
+   "evaluation_outcomes_consumed": false,
+   "recipe": {
+    "attachment_weight": 0.0,
+    "finite_repair": false,
+    "gradient_projection": false,
+    "phrase_weight": 0.75,
+    "two_sentence": false
+   },
+   "standard_prompt_sha256": "e8196398b127cbb84effe4fbe083151a1f4212e7d329dc57ce67498739102d10"
+  },
+  "image_id": "c1r1p0m0_tab-pp-000_np_attach_s0",
+  "loss_config": {
+   "binding_loss": "pd",
+   "holder_aware_weight": 0.0,
+   "leak_weight": 0.3,
+   "max_update_ratio": 0.02,
+   "relation_geometry": "metric_aligned_v1",
+   "relation_loss_weight": 6.0,
+   "relation_margin": 0.25,
+   "relation_off_axis_weight": 1.0,
+   "relation_proximity_max": 0.29296875,
+   "relation_separation_weight": 1.0,
+   "scale_factor": 10.0
+  },
+  "original_position": 0,
+  "pd_indices": {
+   "corr": [],
+   "exist": [
+    4,
+    7,
+    10
+   ],
+   "leak": [],
+   "possession": []
+  },
+  "physical_batch_index": 0,
+  "physical_batch_position": 0,
+  "program_sha256": "9d744f119d5e2c6aebd3654a592731e56d9d4c04f7faadcfc6ce9ff6d4298045",
+  "prompt": "It is the cage with a dog that the girl stands next to.",
+  "reading": "np_attach",
+  "relations": [
+   {
+    "label": "next_to",
+    "object_clip_index": 4,
+    "subject_clip_index": 10
+   }
+  ],
+  "run_id": "20260925_sd14_tab_pp_ablation_v1",
+  "seed": 0,
+  "source_program_sha256": "24404dd29ddd7c3a91cf96ffc76f058f57c2028ed6337c3e967e8240b764538c",
+  "source_standard_input_signature": "a02ba0f8ff402fdc46730e5972ade6e414883a56f24fd866aa6945677a729f3d",
+  "standard_intervention_trace_sha256": "3bdedd2ec51a7aeebf56ee5d8e02536410ee973b5465adf0f15d6c586ecc2d5f",
+  "tab_category": "Syntax Prepositional Phrase (PP)",
+  "tab_evaluation_mode": "targeted_setup",
+  "tab_id": "tab-pp-000",
+  "tab_requires_reading": true,
+  "target_setup_index": 0,
+  "target_setup_mapping_evidence_sha256": "462f6f58fedef22fc41b21228dae888f5a67eb6315e77cc3b02f97b288ad844a",
+  "token_ids": [
+   49406,
+   585,
+   533,
+   518,
+   11838,
+   593,
+   320,
+   1929,
+   682,
+   518,
+   1611,
+   6446,
+   1131,
+   531,
+   269,
+   49407
+  ],
+  "transfer_region": {
+   "plan": {
+    "alignment_sha256": "1b247a00bb61828b3be1dd90ba40f3fd98b6e923ea372fd456b7b1de15cbb099",
+    "conditioning": "It is the cage with a dog that the girl stands next to.",
+    "conditioning_token_count": 16,
+    "groups": [
+     [
+      [
+       10
+      ]
+     ],
+     [
+      [
+       4
+      ],
+      [
+       7
+      ]
+     ]
+    ],
+    "mapped_program": {
+     "corr": [],
+     "exist": [
+      4,
+      7,
+      10
+     ],
+     "leak": [],
+     "possession": [
+      [
+       4,
+       7
+      ],
+      [
+       10,
+       4
+      ]
+     ]
+    },
+    "mapping": [
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      2
+     ],
+     [
+      3,
+      3
+     ],
+     [
+      4,
+      4
+     ],
+     [
+      5,
+      5
+     ],
+     [
+      6,
+      6
+     ],
+     [
+      7,
+      7
+     ],
+     [
+      8,
+      8
+     ],
+     [
+      9,
+      9
+     ],
+     [
+      10,
+      10
+     ],
+     [
+      11,
+      11
+     ],
+     [
+      12,
+      12
+     ],
+     [
+      13,
+      13
+     ],
+     [
+      14,
+      14
+     ]
+    ],
+    "original_token_count": 16,
+    "phantom_anchor": null,
+    "program_sha256": "1cae1ae7b00a91960c5ee425ae723e2a071fd13599ced3f8e4528b2a8ea84352",
+    "prompt_sha256": "e8196398b127cbb84effe4fbe083151a1f4212e7d329dc57ce67498739102d10",
+    "reason": "source_order_holders_with_selected_PP_object",
+    "relation": "left",
+    "schema": "holsd.sd14_prefix_layout.v1",
+    "source_branch": "tab_attachment",
+    "source_plan_sha256": "dc7808177e6082a408bec6d49a430ee12659a92c8108401b61d77aa899979401"
+   },
+   "weight": 0.25
+  },
+  "transfer_trace": {
+   "ablation": {
+    "base_recipe": "combined_region_only",
+    "cell": "c1r1p0m0",
+    "conditioning": "interpretation_rewrite",
+    "phrase_value_mixing": false,
+    "possession": "standard_pd_rule",
+    "removed_possession": [
+     [
+      4,
+      7
+     ],
+     [
+      10,
+      4
+     ]
+    ],
+    "schema": "holsd.tab_pp_ablation.v1",
+    "switches": {
+     "cond": true,
+     "mix": false,
+     "poss": false,
+     "reg": true
+    }
+   },
+   "evaluation_outcomes_consumed": false,
+   "layout": {
+    "alignment_sha256": "1b247a00bb61828b3be1dd90ba40f3fd98b6e923ea372fd456b7b1de15cbb099",
+    "conditioning": "It is the cage with a dog that the girl stands next to.",
+    "conditioning_token_count": 16,
+    "groups": [
+     [
+      [
+       10
+      ]
+     ],
+     [
+      [
+       4
+      ],
+      [
+       7
+      ]
+     ]
+    ],
+    "mapped_program": {
+     "corr": [],
+     "exist": [
+      4,
+      7,
+      10
+     ],
+     "leak": [],
+     "possession": [
+      [
+       4,
+       7
+      ],
+      [
+       10,
+       4
+      ]
+     ]
+    },
+    "mapping": [
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      2
+     ],
+     [
+      3,
+      3
+     ],
+     [
+      4,
+      4
+     ],
+     [
+      5,
+      5
+     ],
+     [
+      6,
+      6
+     ],
+     [
+      7,
+      7
+     ],
+     [
+      8,
+      8
+     ],
+     [
+      9,
+      9
+     ],
+     [
+      10,
+      10
+     ],
+     [
+      11,
+      11
+     ],
+     [
+      12,
+      12
+     ],
+     [
+      13,
+      13
+     ],
+     [
+      14,
+      14
+     ]
+    ],
+    "original_token_count": 16,
+    "phantom_anchor": null,
+    "program_sha256": "1cae1ae7b00a91960c5ee425ae723e2a071fd13599ced3f8e4528b2a8ea84352",
+    "prompt_sha256": "e8196398b127cbb84effe4fbe083151a1f4212e7d329dc57ce67498739102d10",
+    "reason": "source_order_holders_with_selected_PP_object",
+    "relation": "left",
+    "schema": "holsd.sd14_prefix_layout.v1",
+    "source_branch": "tab_attachment",
+    "source_plan_sha256": "dc7808177e6082a408bec6d49a430ee12659a92c8108401b61d77aa899979401"
+   },
+   "layout_reason": "active",
+   "recipe": "combined_region_only",
+   "schema": "holsd.tab_pp_t2i_transfer.v1",
+   "source_audit_sha256": "97facc1a275943295b3d8b594a09b2948ea591cb44206d596209f52e519cb6f9",
+   "spatial": true
+  }
+ },
+ {
+  "arm": "c1r1p0m0",
+  "condition": "20260925_sd14_tab_pp_ablation_v1:c1r1p0m0",
+  "effective_sha256": "5ae3b0c8fb6b54e9a9fd6469c1f9c2d9b4762fbba19513c2dbbb2f04a1dca4bf",
+  "evaluation_setup_indices": [
+   1
+  ],
+  "followup_trace": {
+   "evaluation_outcomes_consumed": false,
+   "recipe": {
+    "attachment_weight": 0.0,
+    "finite_repair": false,
+    "gradient_projection": false,
+    "phrase_weight": 0.75,
+    "two_sentence": false
+   },
+   "standard_prompt_sha256": "991a62fc8fa7af50d02c6fa968414218d2fee8df54ce477a0c1227926872fa92"
+  },
+  "image_id": "c1r1p0m0_tab-pp-000_vp_attach_s0",
+  "loss_config": {
+   "binding_loss": "pd",
+   "holder_aware_weight": 0.0,
+   "leak_weight": 0.3,
+   "max_update_ratio": 0.02,
+   "relation_geometry": "metric_aligned_v1",
+   "relation_loss_weight": 6.0,
+   "relation_margin": 0.25,
+   "relation_off_axis_weight": 1.0,
+   "relation_proximity_max": 0.29296875,
+   "relation_separation_weight": 1.0,
+   "scale_factor": 10.0
+  },
+  "original_position": 5,
+  "pd_indices": {
+   "corr": [],
+   "exist": [
+    3,
+    6,
+    11
+   ],
+   "leak": [],
+   "possession": []
+  },
+  "physical_batch_index": 1,
+  "physical_batch_position": 1,
+  "program_sha256": "d3357ecad885bc6426ef6650d2beb4d1421d745f8ed77900e176f442fa1c981e",
+  "prompt": "With a dog, the girl stands next to the cage.",
+  "reading": "vp_attach",
+  "relations": [
+   {
+    "label": "next_to",
+    "object_clip_index": 11,
+    "subject_clip_index": 6
+   }
+  ],
+  "run_id": "20260925_sd14_tab_pp_ablation_v1",
+  "seed": 0,
+  "source_program_sha256": "69857daad453b56e7fa140be24ae1c809e3cea2ffa6bed9d8f22a617bebdca88",
+  "source_standard_input_signature": "f807dbf6c194801b2e4b1e9087830ceccde2dff85978ba1de7c96594424422f8",
+  "standard_intervention_trace_sha256": "c11dfcdbf466236cedafa11b4ca972cdffcc82719191c4456b38ea2330644b0b",
+  "tab_category": "Syntax Prepositional Phrase (PP)",
+  "tab_evaluation_mode": "targeted_setup",
+  "tab_id": "tab-pp-000",
+  "tab_requires_reading": true,
+  "target_setup_index": 1,
+  "target_setup_mapping_evidence_sha256": "462f6f58fedef22fc41b21228dae888f5a67eb6315e77cc3b02f97b288ad844a",
+  "token_ids": [
+   49406,
+   593,
+   320,
+   1929,
+   267,
+   518,
+   1611,
+   6446,
+   1131,
+   531,
+   518,
+   11838,
+   269,
+   49407
+  ],
+  "transfer_region": {
+   "plan": {
+    "alignment_sha256": "3ee0213fa0308dfa58468ad656f58d49a88fd8be9bdbbfc1d9f754d3e6bf4b27",
+    "conditioning": "With a dog, the girl stands next to the cage.",
+    "conditioning_token_count": 14,
+    "groups": [
+     [
+      [
+       6
+      ],
+      [
+       3
+      ]
+     ],
+     [
+      [
+       11
+      ]
+     ]
+    ],
+    "mapped_program": {
+     "corr": [],
+     "exist": [
+      3,
+      6,
+      11
+     ],
+     "leak": [],
+     "possession": [
+      [
+       6,
+       3
+      ],
+      [
+       6,
+       11
+      ]
+     ]
+    },
+    "mapping": [
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      2
+     ],
+     [
+      3,
+      3
+     ],
+     [
+      4,
+      4
+     ],
+     [
+      5,
+      5
+     ],
+     [
+      6,
+      6
+     ],
+     [
+      7,
+      7
+     ],
+     [
+      8,
+      8
+     ],
+     [
+      9,
+      9
+     ],
+     [
+      10,
+      10
+     ],
+     [
+      11,
+      11
+     ],
+     [
+      12,
+      12
+     ]
+    ],
+    "original_token_count": 14,
+    "phantom_anchor": null,
+    "program_sha256": "bb7260887a83a0c60933058651e3df8034a62ca6141b77588a292a46d87c9643",
+    "prompt_sha256": "991a62fc8fa7af50d02c6fa968414218d2fee8df54ce477a0c1227926872fa92",
+    "reason": "source_order_holders_with_selected_PP_object",
+    "relation": "left",
+    "schema": "holsd.sd14_prefix_layout.v1",
+    "source_branch": "tab_attachment",
+    "source_plan_sha256": "5f1f56bb431192bc151a0c9cb4160407df58c2633d749c59c6580dc0fe364a25"
+   },
+   "weight": 0.25
+  },
+  "transfer_trace": {
+   "ablation": {
+    "base_recipe": "combined_region_only",
+    "cell": "c1r1p0m0",
+    "conditioning": "interpretation_rewrite",
+    "phrase_value_mixing": false,
+    "possession": "standard_pd_rule",
+    "removed_possession": [
+     [
+      6,
+      3
+     ],
+     [
+      6,
+      11
+     ]
+    ],
+    "schema": "holsd.tab_pp_ablation.v1",
+    "switches": {
+     "cond": true,
+     "mix": false,
+     "poss": false,
+     "reg": true
+    }
+   },
+   "evaluation_outcomes_consumed": false,
+   "layout": {
+    "alignment_sha256": "3ee0213fa0308dfa58468ad656f58d49a88fd8be9bdbbfc1d9f754d3e6bf4b27",
+    "conditioning": "With a dog, the girl stands next to the cage.",
+    "conditioning_token_count": 14,
+    "groups": [
+     [
+      [
+       6
+      ],
+      [
+       3
+      ]
+     ],
+     [
+      [
+       11
+      ]
+     ]
+    ],
+    "mapped_program": {
+     "corr": [],
+     "exist": [
+      3,
+      6,
+      11
+     ],
+     "leak": [],
+     "possession": [
+      [
+       6,
+       3
+      ],
+      [
+       6,
+       11
+      ]
+     ]
+    },
+    "mapping": [
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      2
+     ],
+     [
+      3,
+      3
+     ],
+     [
+      4,
+      4
+     ],
+     [
+      5,
+      5
+     ],
+     [
+      6,
+      6
+     ],
+     [
+      7,
+      7
+     ],
+     [
+      8,
+      8
+     ],
+     [
+      9,
+      9
+     ],
+     [
+      10,
+      10
+     ],
+     [
+      11,
+      11
+     ],
+     [
+      12,
+      12
+     ]
+    ],
+    "original_token_count": 14,
+    "phantom_anchor": null,
+    "program_sha256": "bb7260887a83a0c60933058651e3df8034a62ca6141b77588a292a46d87c9643",
+    "prompt_sha256": "991a62fc8fa7af50d02c6fa968414218d2fee8df54ce477a0c1227926872fa92",
+    "reason": "source_order_holders_with_selected_PP_object",
+    "relation": "left",
+    "schema": "holsd.sd14_prefix_layout.v1",
+    "source_branch": "tab_attachment",
+    "source_plan_sha256": "5f1f56bb431192bc151a0c9cb4160407df58c2633d749c59c6580dc0fe364a25"
+   },
+   "layout_reason": "active",
+   "recipe": "combined_region_only",
+   "schema": "holsd.tab_pp_t2i_transfer.v1",
+   "source_audit_sha256": "551f3307e72d7b83ee99f49e7544e47ce9d3b771c9f6c4bbfe352c0bd73962f2",
+   "spatial": true
+  }
+ },
+ {
+  "arm": "c1r1p0m0",
+  "condition": "20260925_sd14_tab_pp_ablation_v1:c1r1p0m0",
+  "effective_sha256": "b8a2f85e8e17b4d664bf509a9da4b7d39e9c5b870b936a7c94536b157b1e5c86",
+  "evaluation_setup_indices": [
+   0
+  ],
+  "followup_trace": {
+   "evaluation_outcomes_consumed": false,
+   "recipe": {
+    "attachment_weight": 0.0,
+    "finite_repair": false,
+    "gradient_projection": false,
+    "phrase_weight": 0.75,
+    "two_sentence": false
+   },
+   "standard_prompt_sha256": "6adea661d5417ce6650cb7146aba45fc292d7ed43b92fa237f38f6b7cc0200f8"
+  },
+  "image_id": "c1r1p0m0_tab-pp-021_np_attach_s0",
+  "loss_config": {
+   "binding_loss": "pd",
+   "holder_aware_weight": 0.0,
+   "leak_weight": 0.3,
+   "max_update_ratio": 0.06,
+   "relation_geometry": "metric_aligned_v1",
+   "relation_loss_weight": 6.0,
+   "relation_margin": 0.25,
+   "relation_off_axis_weight": 1.0,
+   "relation_proximity_max": 0.29296875,
+   "relation_separation_weight": 1.0,
+   "scale_factor": 80.0
+  },
+  "original_position": 210,
+  "pd_indices": {
+   "corr": [
+    [
+     10,
+     11
+    ]
+   ],
+   "exist": [
+    2,
+    7,
+    11
+   ],
+   "leak": [
+    [
+     10,
+     2
+    ],
+    [
+     10,
+     7
+    ]
+   ],
+   "possession": []
+  },
+  "physical_batch_index": 52,
+  "physical_batch_position": 2,
+  "program_sha256": "fe127098c19e4c37f73929fa81eae2e381fed2fd5c359c800a050fb0f5694cdd",
+  "prompt": "The girl standing next to the desk with a blue book",
+  "reading": "np_attach",
+  "relations": [
+   {
+    "label": "next_to",
+    "object_clip_index": 7,
+    "subject_clip_index": 2
+   }
+  ],
+  "run_id": "20260925_sd14_tab_pp_ablation_v1",
+  "seed": 0,
+  "source_program_sha256": "08eb93b93b1bd19b1db644a42d2e1db09b213c2e62044555827b40578de1ee10",
+  "source_standard_input_signature": "054d27ce9ff07fc2721aa5a7b312a855812652fabc1df003084ce48fcbe29fe8",
+  "standard_intervention_trace_sha256": "5a97b18c80053fc90056eba72e6f2f5db84922f3fecfec1010e7fadacf9cb3e7",
+  "tab_category": "Syntax Prepositional Phrase (PP)",
+  "tab_evaluation_mode": "targeted_setup",
+  "tab_id": "tab-pp-021",
+  "tab_requires_reading": true,
+  "target_setup_index": 0,
+  "target_setup_mapping_evidence_sha256": "472d41e87fad90c23730f6f813e546601b316e808f7f9acedd55c3be041c487a",
+  "token_ids": [
+   49406,
+   518,
+   1611,
+   2862,
+   1131,
+   531,
+   518,
+   6550,
+   593,
+   320,
+   1746,
+   1116,
+   49407
+  ],
+  "transfer_trace": {
+   "ablation": {
+    "base_recipe": "combined_region_only",
+    "cell": "c1r1p0m0",
+    "conditioning": "interpretation_rewrite",
+    "phrase_value_mixing": false,
+    "possession": "standard_pd_rule",
+    "removed_possession": [
+     [
+      2,
+      7
+     ]
+    ],
+    "schema": "holsd.tab_pp_ablation.v1",
+    "switches": {
+     "cond": true,
+     "mix": false,
+     "poss": false,
+     "reg": true
+    }
+   },
+   "evaluation_outcomes_consumed": false,
+   "layout_reason": "unsupported_attachment_pair",
+   "p2": true,
+   "recipe": "combined_region_only",
+   "schema": "holsd.tab_pp_t2i_transfer.v1",
+   "source_audit_sha256": "c9c1902eb24dd857c82ce08cc6399c70345f32757f92f59a533abcc269446206",
+   "spatial": true
+  }
+ },
+ {
+  "arm": "c1r1p0m0",
+  "condition": "20260925_sd14_tab_pp_ablation_v1:c1r1p0m0",
+  "effective_sha256": "b8a2f85e8e17b4d664bf509a9da4b7d39e9c5b870b936a7c94536b157b1e5c86",
+  "evaluation_setup_indices": [
+   1
+  ],
+  "followup_trace": {
+   "evaluation_outcomes_consumed": false,
+   "recipe": {
+    "attachment_weight": 0.0,
+    "finite_repair": false,
+    "gradient_projection": false,
+    "phrase_weight": 0.75,
+    "two_sentence": false
+   },
+   "standard_prompt_sha256": "6adea661d5417ce6650cb7146aba45fc292d7ed43b92fa237f38f6b7cc0200f8"
+  },
+  "image_id": "c1r1p0m0_tab-pp-021_vp_attach_s0",
+  "loss_config": {
+   "binding_loss": "pd",
+   "holder_aware_weight": 0.0,
+   "leak_weight": 0.3,
+   "max_update_ratio": 0.06,
+   "relation_geometry": "metric_aligned_v1",
+   "relation_loss_weight": 6.0,
+   "relation_margin": 0.25,
+   "relation_off_axis_weight": 1.0,
+   "relation_proximity_max": 0.29296875,
+   "relation_separation_weight": 1.0,
+   "scale_factor": 80.0
+  },
+  "original_position": 215,
+  "pd_indices": {
+   "corr": [
+    [
+     10,
+     11
+    ]
+   ],
+   "exist": [
+    2,
+    7,
+    11
+   ],
+   "leak": [
+    [
+     10,
+     2
+    ],
+    [
+     10,
+     7
+    ]
+   ],
+   "possession": []
+  },
+  "physical_batch_index": 53,
+  "physical_batch_position": 3,
+  "program_sha256": "fe127098c19e4c37f73929fa81eae2e381fed2fd5c359c800a050fb0f5694cdd",
+  "prompt": "The girl standing next to the desk with a blue book",
+  "reading": "vp_attach",
+  "relations": [
+   {
+    "label": "next_to",
+    "object_clip_index": 7,
+    "subject_clip_index": 2
+   }
+  ],
+  "run_id": "20260925_sd14_tab_pp_ablation_v1",
+  "seed": 0,
+  "source_program_sha256": "77319d4c7433af15b9bbea08ce596354cc411c9f6247575ca828e720eeb4704e",
+  "source_standard_input_signature": "991e096713d3f6b2d9310c656e6db21600f2b1c3bfedd517bf150eeda0cdb966",
+  "standard_intervention_trace_sha256": "e2ef35476c998ccc46be1b192227f96b43caedf6c55463adcf39878eaa56ecf3",
+  "tab_category": "Syntax Prepositional Phrase (PP)",
+  "tab_evaluation_mode": "targeted_setup",
+  "tab_id": "tab-pp-021",
+  "tab_requires_reading": true,
+  "target_setup_index": 1,
+  "target_setup_mapping_evidence_sha256": "472d41e87fad90c23730f6f813e546601b316e808f7f9acedd55c3be041c487a",
+  "token_ids": [
+   49406,
+   518,
+   1611,
+   2862,
+   1131,
+   531,
+   518,
+   6550,
+   593,
+   320,
+   1746,
+   1116,
+   49407
+  ],
+  "transfer_trace": {
+   "ablation": {
+    "base_recipe": "combined_region_only",
+    "cell": "c1r1p0m0",
+    "conditioning": "interpretation_rewrite",
+    "phrase_value_mixing": false,
+    "possession": "standard_pd_rule",
+    "removed_possession": [
+     [
+      2,
+      7
+     ],
+     [
+      2,
+      11
+     ]
+    ],
+    "schema": "holsd.tab_pp_ablation.v1",
+    "switches": {
+     "cond": true,
+     "mix": false,
+     "poss": false,
+     "reg": true
+    }
+   },
+   "evaluation_outcomes_consumed": false,
+   "layout_reason": "unsupported_attachment_pair",
+   "p2": true,
+   "recipe": "combined_region_only",
+   "schema": "holsd.tab_pp_t2i_transfer.v1",
+   "source_audit_sha256": "c20845a15992daa100d43ec5bd890e43a3ee4ede15d99076176387544378fa84",
+   "spatial": true
+  }
+ },
+ {
+  "arm": "c1r1p0m0",
+  "condition": "20260925_sd14_tab_pp_ablation_v1:c1r1p0m0",
+  "effective_sha256": "baecd2e9598334fa72bdbc5f52ceb6d40578846052a8e689b5f8358048d7108a",
+  "evaluation_setup_indices": [
+   1
+  ],
+  "followup_trace": {
+   "evaluation_outcomes_consumed": false,
+   "recipe": {
+    "attachment_weight": 0.0,
+    "finite_repair": false,
+    "gradient_projection": false,
+    "phrase_weight": 0.75,
+    "two_sentence": false
+   },
+   "standard_prompt_sha256": "f599f1ccf822622e6e75ac03a28544854606718db63757222658b53014758eb4"
+  },
+  "image_id": "c1r1p0m0_tab-pp-037_np_attach_s0",
+  "loss_config": {
+   "binding_loss": "pd",
+   "holder_aware_weight": 0.0,
+   "leak_weight": 0.3,
+   "max_update_ratio": 0.06,
+   "relation_geometry": "metric_aligned_v1",
+   "relation_loss_weight": 0.0,
+   "relation_margin": 0.25,
+   "relation_off_axis_weight": 1.0,
+   "relation_proximity_max": 0.29296875,
+   "relation_separation_weight": 1.0,
+   "scale_factor": 80.0
+  },
+  "original_position": 370,
+  "pd_indices": {
+   "corr": [
+    [
+     7,
+     8
+    ]
+   ],
+   "exist": [
+    4,
+    8,
+    11
+   ],
+   "leak": [
+    [
+     7,
+     4
+    ],
+    [
+     7,
+     11
+    ]
+   ],
+   "possession": []
+  },
+  "physical_batch_index": 92,
+  "physical_batch_position": 2,
+  "program_sha256": "4c8ae160dcad8a7af4484cbb39e0366a663c6b7b4184ca544c2812610cea8f5d",
+  "prompt": "It is the chair with a green bag that the girl leaves.",
+  "reading": "np_attach",
+  "relations": [],
+  "run_id": "20260925_sd14_tab_pp_ablation_v1",
+  "seed": 0,
+  "source_program_sha256": "544c16bc1946bc38e18fbbdb1a7394d976b2d3953266c81bc56c01fbeabe131e",
+  "source_standard_input_signature": "ba56dea08bb1eba6b0e0ab36b217c91cf9f6a7f82c117fbc8669442d7a4269c5",
+  "standard_intervention_trace_sha256": "871504efc85228f4c9460f04eeb0e82e0b726b7583192f1cbfd58c1f8f43fd18",
+  "tab_category": "Syntax Prepositional Phrase (PP)",
+  "tab_evaluation_mode": "targeted_setup",
+  "tab_id": "tab-pp-037",
+  "tab_requires_reading": true,
+  "target_setup_index": 1,
+  "target_setup_mapping_evidence_sha256": "4a43c99ad8baaff402722cc3d6a296227f8744c0e5eccbbc9347c3a25aca799c",
+  "token_ids": [
+   49406,
+   585,
+   533,
+   518,
+   4269,
+   593,
+   320,
+   1901,
+   3365,
+   682,
+   518,
+   1611,
+   5579,
+   269,
+   49407
+  ],
+  "transfer_region": {
+   "plan": {
+    "alignment_sha256": "cdacb875948d68290532f2486b49dba8e9099251f14704738a29a5b47c41652c",
+    "conditioning": "It is the chair with a green bag that the girl leaves.",
+    "conditioning_token_count": 15,
+    "groups": [
+     [
+      [
+       11
+      ]
+     ],
+     [
+      [
+       4
+      ],
+      [
+       7
+      ],
+      [
+       8
+      ]
+     ]
+    ],
+    "mapped_program": {
+     "corr": [
+      [
+       7,
+       8
+      ]
+     ],
+     "exist": [
+      4,
+      8,
+      11
+     ],
+     "leak": [
+      [
+       7,
+       4
+      ],
+      [
+       7,
+       11
+      ]
+     ],
+     "possession": [
+      [
+       4,
+       8
+      ]
+     ]
+    },
+    "mapping": [
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      2
+     ],
+     [
+      3,
+      3
+     ],
+     [
+      4,
+      4
+     ],
+     [
+      5,
+      5
+     ],
+     [
+      6,
+      6
+     ],
+     [
+      7,
+      7
+     ],
+     [
+      8,
+      8
+     ],
+     [
+      9,
+      9
+     ],
+     [
+      10,
+      10
+     ],
+     [
+      11,
+      11
+     ],
+     [
+      12,
+      12
+     ],
+     [
+      13,
+      13
+     ]
+    ],
+    "original_token_count": 15,
+    "phantom_anchor": null,
+    "program_sha256": "d4d871d4cae414e45802671fe22bf61de991786ae4c0c7502a33ae494c4f2f51",
+    "prompt_sha256": "f599f1ccf822622e6e75ac03a28544854606718db63757222658b53014758eb4",
+    "reason": "source_order_holders_with_selected_PP_object",
+    "relation": "left",
+    "schema": "holsd.sd14_prefix_layout.v1",
+    "source_branch": "tab_attachment",
+    "source_plan_sha256": "02e978a8d2affcd8c7dbd5a0bdf0e0517c744f44b9f8c0512cd519a992bafc4e"
+   },
+   "weight": 0.25
+  },
+  "transfer_trace": {
+   "ablation": {
+    "base_recipe": "combined_region_only",
+    "cell": "c1r1p0m0",
+    "conditioning": "interpretation_rewrite",
+    "phrase_value_mixing": false,
+    "possession": "standard_pd_rule",
+    "removed_possession": [
+     [
+      4,
+      8
+     ]
+    ],
+    "schema": "holsd.tab_pp_ablation.v1",
+    "switches": {
+     "cond": true,
+     "mix": false,
+     "poss": false,
+     "reg": true
+    }
+   },
+   "evaluation_outcomes_consumed": false,
+   "layout": {
+    "alignment_sha256": "cdacb875948d68290532f2486b49dba8e9099251f14704738a29a5b47c41652c",
+    "conditioning": "It is the chair with a green bag that the girl leaves.",
+    "conditioning_token_count": 15,
+    "groups": [
+     [
+      [
+       11
+      ]
+     ],
+     [
+      [
+       4
+      ],
+      [
+       7
+      ],
+      [
+       8
+      ]
+     ]
+    ],
+    "mapped_program": {
+     "corr": [
+      [
+       7,
+       8
+      ]
+     ],
+     "exist": [
+      4,
+      8,
+      11
+     ],
+     "leak": [
+      [
+       7,
+       4
+      ],
+      [
+       7,
+       11
+      ]
+     ],
+     "possession": [
+      [
+       4,
+       8
+      ]
+     ]
+    },
+    "mapping": [
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      2
+     ],
+     [
+      3,
+      3
+     ],
+     [
+      4,
+      4
+     ],
+     [
+      5,
+      5
+     ],
+     [
+      6,
+      6
+     ],
+     [
+      7,
+      7
+     ],
+     [
+      8,
+      8
+     ],
+     [
+      9,
+      9
+     ],
+     [
+      10,
+      10
+     ],
+     [
+      11,
+      11
+     ],
+     [
+      12,
+      12
+     ],
+     [
+      13,
+      13
+     ]
+    ],
+    "original_token_count": 15,
+    "phantom_anchor": null,
+    "program_sha256": "d4d871d4cae414e45802671fe22bf61de991786ae4c0c7502a33ae494c4f2f51",
+    "prompt_sha256": "f599f1ccf822622e6e75ac03a28544854606718db63757222658b53014758eb4",
+    "reason": "source_order_holders_with_selected_PP_object",
+    "relation": "left",
+    "schema": "holsd.sd14_prefix_layout.v1",
+    "source_branch": "tab_attachment",
+    "source_plan_sha256": "02e978a8d2affcd8c7dbd5a0bdf0e0517c744f44b9f8c0512cd519a992bafc4e"
+   },
+   "layout_reason": "active",
+   "p2": true,
+   "recipe": "combined_region_only",
+   "schema": "holsd.tab_pp_t2i_transfer.v1",
+   "source_audit_sha256": "922822fc65417191112eea87cbd74f5c0b7928158c57f3cf7e1d4e1ba1d1c682"
+  }
+ },
+ {
+  "arm": "c1r1p0m0",
+  "condition": "20260925_sd14_tab_pp_ablation_v1:c1r1p0m0",
+  "effective_sha256": "d57a911586855ff61b280083cdb61df059690eb841a0a6f0bef1e29a3fd0e881",
+  "evaluation_setup_indices": [
+   0
+  ],
+  "followup_trace": {
+   "evaluation_outcomes_consumed": false,
+   "recipe": {
+    "attachment_weight": 0.0,
+    "finite_repair": false,
+    "gradient_projection": false,
+    "phrase_weight": 0.75,
+    "two_sentence": false
+   },
+   "standard_prompt_sha256": "e32496caa4c2d5f27aebac8c532a8390bb43f97f18435ba6bcb9e33cb2f08a7d"
+  },
+  "image_id": "c1r1p0m0_tab-pp-037_vp_attach_s0",
+  "loss_config": {
+   "binding_loss": "pd",
+   "holder_aware_weight": 0.0,
+   "leak_weight": 0.3,
+   "max_update_ratio": 0.06,
+   "relation_geometry": "metric_aligned_v1",
+   "relation_loss_weight": 0.0,
+   "relation_margin": 0.25,
+   "relation_off_axis_weight": 1.0,
+   "relation_proximity_max": 0.29296875,
+   "relation_separation_weight": 1.0,
+   "scale_factor": 80.0
+  },
+  "original_position": 375,
+  "pd_indices": {
+   "corr": [
+    [
+     3,
+     4
+    ]
+   ],
+   "exist": [
+    4,
+    7,
+    10
+   ],
+   "leak": [
+    [
+     3,
+     7
+    ],
+    [
+     3,
+     10
+    ]
+   ],
+   "possession": []
+  },
+  "physical_batch_index": 93,
+  "physical_batch_position": 3,
+  "program_sha256": "41e6ba450e40b04687c8a51d857a11d1f3c0127014dcf55aabec7173914bd555",
+  "prompt": "With a green bag, the girl leaves the chair.",
+  "reading": "vp_attach",
+  "relations": [],
+  "run_id": "20260925_sd14_tab_pp_ablation_v1",
+  "seed": 0,
+  "source_program_sha256": "b3676a3ac722507039e47edb6de00b162e64b33138c17c0dc4bff72a206b5852",
+  "source_standard_input_signature": "931055259a1d62ad779973bdd131741cfcf179c7f2a32b255f90b02994953475",
+  "standard_intervention_trace_sha256": "e6749fe726aa39f7bd07a5e62ff6ad007779d7bab641a4d51bc9855fa9296918",
+  "tab_category": "Syntax Prepositional Phrase (PP)",
+  "tab_evaluation_mode": "targeted_setup",
+  "tab_id": "tab-pp-037",
+  "tab_requires_reading": true,
+  "target_setup_index": 0,
+  "target_setup_mapping_evidence_sha256": "4a43c99ad8baaff402722cc3d6a296227f8744c0e5eccbbc9347c3a25aca799c",
+  "token_ids": [
+   49406,
+   593,
+   320,
+   1901,
+   3365,
+   267,
+   518,
+   1611,
+   5579,
+   518,
+   4269,
+   269,
+   49407
+  ],
+  "transfer_region": {
+   "plan": {
+    "alignment_sha256": "d926d453c4d3a246e36feaf9db50aa0f4cc52721ef2d45f5c39c1f2d54ff3863",
+    "conditioning": "With a green bag, the girl leaves the chair.",
+    "conditioning_token_count": 13,
+    "groups": [
+     [
+      [
+       7
+      ],
+      [
+       3
+      ],
+      [
+       4
+      ]
+     ],
+     [
+      [
+       10
+      ]
+     ]
+    ],
+    "mapped_program": {
+     "corr": [
+      [
+       3,
+       4
+      ]
+     ],
+     "exist": [
+      4,
+      7,
+      10
+     ],
+     "leak": [
+      [
+       3,
+       7
+      ],
+      [
+       3,
+       10
+      ]
+     ],
+     "possession": [
+      [
+       7,
+       4
+      ]
+     ]
+    },
+    "mapping": [
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      2
+     ],
+     [
+      3,
+      3
+     ],
+     [
+      4,
+      4
+     ],
+     [
+      5,
+      5
+     ],
+     [
+      6,
+      6
+     ],
+     [
+      7,
+      7
+     ],
+     [
+      8,
+      8
+     ],
+     [
+      9,
+      9
+     ],
+     [
+      10,
+      10
+     ],
+     [
+      11,
+      11
+     ]
+    ],
+    "original_token_count": 13,
+    "phantom_anchor": null,
+    "program_sha256": "1fabf7f93990aa30791e18e9894006adb599552fd70207f9c7831b33bf073503",
+    "prompt_sha256": "e32496caa4c2d5f27aebac8c532a8390bb43f97f18435ba6bcb9e33cb2f08a7d",
+    "reason": "source_order_holders_with_selected_PP_object",
+    "relation": "left",
+    "schema": "holsd.sd14_prefix_layout.v1",
+    "source_branch": "tab_attachment",
+    "source_plan_sha256": "9c9405d017c67e2e4ab6ecd4ab01bb045d8394d2bb9c98bb50fee138b06358e9"
+   },
+   "weight": 0.25
+  },
+  "transfer_trace": {
+   "ablation": {
+    "base_recipe": "combined_region_only",
+    "cell": "c1r1p0m0",
+    "conditioning": "interpretation_rewrite",
+    "phrase_value_mixing": false,
+    "possession": "standard_pd_rule",
+    "removed_possession": [
+     [
+      7,
+      4
+     ]
+    ],
+    "schema": "holsd.tab_pp_ablation.v1",
+    "switches": {
+     "cond": true,
+     "mix": false,
+     "poss": false,
+     "reg": true
+    }
+   },
+   "evaluation_outcomes_consumed": false,
+   "layout": {
+    "alignment_sha256": "d926d453c4d3a246e36feaf9db50aa0f4cc52721ef2d45f5c39c1f2d54ff3863",
+    "conditioning": "With a green bag, the girl leaves the chair.",
+    "conditioning_token_count": 13,
+    "groups": [
+     [
+      [
+       7
+      ],
+      [
+       3
+      ],
+      [
+       4
+      ]
+     ],
+     [
+      [
+       10
+      ]
+     ]
+    ],
+    "mapped_program": {
+     "corr": [
+      [
+       3,
+       4
+      ]
+     ],
+     "exist": [
+      4,
+      7,
+      10
+     ],
+     "leak": [
+      [
+       3,
+       7
+      ],
+      [
+       3,
+       10
+      ]
+     ],
+     "possession": [
+      [
+       7,
+       4
+      ]
+     ]
+    },
+    "mapping": [
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      2
+     ],
+     [
+      3,
+      3
+     ],
+     [
+      4,
+      4
+     ],
+     [
+      5,
+      5
+     ],
+     [
+      6,
+      6
+     ],
+     [
+      7,
+      7
+     ],
+     [
+      8,
+      8
+     ],
+     [
+      9,
+      9
+     ],
+     [
+      10,
+      10
+     ],
+     [
+      11,
+      11
+     ]
+    ],
+    "original_token_count": 13,
+    "phantom_anchor": null,
+    "program_sha256": "1fabf7f93990aa30791e18e9894006adb599552fd70207f9c7831b33bf073503",
+    "prompt_sha256": "e32496caa4c2d5f27aebac8c532a8390bb43f97f18435ba6bcb9e33cb2f08a7d",
+    "reason": "source_order_holders_with_selected_PP_object",
+    "relation": "left",
+    "schema": "holsd.sd14_prefix_layout.v1",
+    "source_branch": "tab_attachment",
+    "source_plan_sha256": "9c9405d017c67e2e4ab6ecd4ab01bb045d8394d2bb9c98bb50fee138b06358e9"
+   },
+   "layout_reason": "active",
+   "p2": true,
+   "recipe": "combined_region_only",
+   "schema": "holsd.tab_pp_t2i_transfer.v1",
+   "source_audit_sha256": "70beab722f4cc0556e556b3f1b73b8e412f822a718743a052a0182aa3e034843"
+  }
+ }
+]

@@ -1,0 +1,7 @@
+# Additional bare-to-marked category mappings observed in HolCCG output.
+# This overlay is appended only when the bare category is absent upstream.
+
+((NP\NP)/(S[dcl]\NP))\((NP\NP)/NP)
+  3 (((NP{Y}\NP{Y}){_}/(S[dcl]{Z}\NP{W}){Z}<1>){_}\((NP{Y}\NP{Y}){_}/NP{V}){_}<2>){_}
+  1 ignore
+  2 ignore

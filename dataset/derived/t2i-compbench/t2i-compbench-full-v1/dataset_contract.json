@@ -1,0 +1,55 @@
+{
+  "schema": "holsd.t2icb_full_dataset_contract.v1",
+  "dataset_id": "t2i-compbench-full-v1",
+  "version": 1,
+  "status": "frozen",
+  "root": "dataset/derived/t2i-compbench/t2i-compbench-full-v1",
+  "created_at": "2026-08-12",
+  "purpose": "Full official T2I-CompBench++ prompt population with ten paired independent image seeds per prompt.",
+  "population": {
+    "categories": [
+      "color",
+      "shape",
+      "texture",
+      "spatial",
+      "3d_spatial",
+      "numeracy",
+      "non_spatial",
+      "complex"
+    ],
+    "prompts_per_category": 300,
+    "prompt_count": 2400,
+    "selection_policy": "all official prompts in source order",
+    "image_seeds": [
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51
+    ],
+    "images_per_prompt": 10,
+    "images_per_arm": 24000
+  },
+  "selection_manifest": {
+    "path": "dataset/derived/t2i-compbench/t2i-compbench-full-v1/selection_manifest.json",
+    "sha256": "959de73018528db02bccd911b76b691f5a48241924471e2301804250563eb7c2"
+  },
+  "source": {
+    "repository": "https://github.com/Karine-Huang/T2I-CompBench",
+    "commit": "1b7094991a57f3c22abdd4f6e8ba6c1a15517073",
+    "pin_path": "output/analysis/t2i_compbench/t2icb_source_pin.json",
+    "pin_sha256": "7ab5732f719f8342215a05dc33d1fdcd0eb3e1981c4385c73df4e4c031d494c9"
+  },
+  "interpretation": {
+    "unit_of_pairing": "identical category, official prompt position, and image seed across all arms",
+    "unit_of_resampling": "prompt after averaging its ten image scores",
+    "cross_category_average": false,
+    "reason": "categories use different official automatic metrics"
+  },
+  "change_policy": "Do not edit files in place. Any changed prompt, position, seed, source pin, or interpretation requires a new dataset id or version."
+}

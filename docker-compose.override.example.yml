@@ -1,0 +1,60 @@
+# docker-compose.override.example.yml
+#
+# Optional overlay that turns the runtime service into a container for coding
+# agents: Claude Code, the Codex CLI, MCP servers for GitHub, Notion and W&B, and
+# tmux (docker/Dockerfile.agent, entry point docker/entrypoint.agent.sh). It is
+# NOT needed to use or reproduce CCG Diffusion: docker-compose.yml alone is the
+# supported environment (docs/installation.md).
+#
+# Usage:
+#   1. cp docker-compose.override.example.yml docker-compose.override.yml
+#      (docker-compose.override.yml is gitignored; Compose merges it into
+#      docker-compose.yml automatically).
+#   2. Set the keys of the "agent overlay" section of .env (see .env.example):
+#        GIT_AUTHOR_NAME  GIT_AUTHOR_EMAIL  GIT_SAFE_DIRECTORY
+#        GITHUB_PERSONAL_ACCESS_TOKEN  CLAUDE_CODE_OAUTH_TOKEN  CODEX_ACCESS_TOKEN
+#        NOTION_TOKEN  WANDB_API_KEY
+#        SSH_DIR  CLAUDE_CONFIG_DIR  CLAUDE_JSON  CODEX_CONFIG_DIR
+#      All are optional: a tool whose token is unset is not configured, and the
+#      host paths default to ~/.ssh, ~/.claude, ~/.claude.json and ~/.codex.
+#      Every mounted path must exist on the host (Docker would otherwise create a
+#      directory in place of ~/.claude.json).
+#   3. Build the runtime image once, then the agent image on top of it:
+#        docker compose -f docker-compose.yml build runtime   # ${IMAGE_NAME}
+#        docker compose build runtime                         # ${IMAGE_NAME}-agent, FROM ${IMAGE_NAME}
+#        docker compose up -d runtime
+#        docker compose exec runtime bash
+#
+# docker/Dockerfile.agent is built FROM the runtime image, so BASE_IMAGE must be
+# the tag that docker-compose.yml builds (${IMAGE_NAME}); the agent image is
+# tagged separately (${IMAGE_NAME}-agent) to avoid a circular FROM. The container
+# name, GPUs, mounts and the hf-cache volume are inherited from docker-compose.yml.
+# `docker compose config` prints the merged file without building anything.
+
+services:
+  runtime:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.agent
+      target: agent
+      args:
+        BASE_IMAGE: ${IMAGE_NAME:-ccg-diffusion:runtime}
+    image: ${IMAGE_NAME:-ccg-diffusion:runtime}-agent
+    command: /entrypoint.agent.sh
+
+    environment:
+      - GIT_AUTHOR_NAME=${GIT_AUTHOR_NAME:-}
+      - GIT_AUTHOR_EMAIL=${GIT_AUTHOR_EMAIL:-}
+      - GIT_SAFE_DIRECTORY=${GIT_SAFE_DIRECTORY:-/workspace/${PROJECT_NAME:-ccg-diffusion}}
+      - GITHUB_PERSONAL_ACCESS_TOKEN=${GITHUB_PERSONAL_ACCESS_TOKEN:-}
+      - CLAUDE_CODE_OAUTH_TOKEN=${CLAUDE_CODE_OAUTH_TOKEN:-}
+      - CODEX_HOME=/home/devuser/.codex
+      - CODEX_ACCESS_TOKEN=${CODEX_ACCESS_TOKEN:-}
+      - NOTION_TOKEN=${NOTION_TOKEN:-}
+      - WANDB_API_KEY=${WANDB_API_KEY:-}
+
+    volumes:
+      - ${SSH_DIR:-${HOME}/.ssh}:/home/devuser/.ssh:ro
+      - ${CLAUDE_CONFIG_DIR:-${HOME}/.claude}:/home/devuser/.claude
+      - ${CLAUDE_JSON:-${HOME}/.claude.json}:/home/devuser/.claude.json
+      - ${CODEX_CONFIG_DIR:-${HOME}/.codex}:/home/devuser/.codex

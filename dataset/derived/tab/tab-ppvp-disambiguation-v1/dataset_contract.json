@@ -1,0 +1,127 @@
+{
+  "schema": "holsd.tab_ppvp_disambiguation_contract.v1",
+  "dataset_id": "tab-ppvp-disambiguation",
+  "version": 1,
+  "status": "frozen",
+  "root": "dataset/derived/tab/tab-ppvp-disambiguation-v1",
+  "created_at": "2026-08-17",
+  "purpose": "Fixed TAB syntax-PP/VP population for the SD1.4 syntactic-ambiguity disambiguation experiment (vanilla / tied-oracle / derivation-conditioned PD arms) under the ACL 2023 TAB faithful-image VQA protocol.",
+  "population": {
+    "experiment_id": "tab_ppvp",
+    "categories": {
+      "Syntax Prepositional Phrase (PP)": {
+        "items": 74,
+        "targets": 148,
+        "commonsense_labels": {
+          "CS": 134,
+          "UCS": 14
+        }
+      },
+      "Syntax Verb Phrase (VP)": {
+        "items": 241,
+        "targets": 482,
+        "commonsense_labels": {
+          "CS": 408,
+          "UCS": 74
+        }
+      }
+    },
+    "item_count": 315,
+    "target_count": 630,
+    "targets_per_item": 2,
+    "image_seeds": [
+      42,
+      43,
+      44,
+      45
+    ],
+    "images_per_item_per_condition": 4
+  },
+  "sources": {
+    "snapshot_root": "dataset/tab/official/amazon-science-tab-dataset-2e9d70c3",
+    "source_repository": "https://github.com/amazon-science/tab-dataset",
+    "source_commit": "2e9d70c3c44037ef7e6a2c96bf8efb31bd6aed0e",
+    "license": "CC BY-SA 4.0",
+    "syntax_pp_csv": {
+      "official_relative_path": "benchmark/data/syntax-pp.csv",
+      "path": "dataset/tab/official/amazon-science-tab-dataset-2e9d70c3/source/syntax-pp.csv",
+      "sha256": "2979c282212c6d343988d13d96647a58da3cecfb83e2780334471423862ca5f5"
+    },
+    "syntax_vp_csv": {
+      "official_relative_path": "benchmark/data/syntax-vp.csv",
+      "path": "dataset/tab/official/amazon-science-tab-dataset-2e9d70c3/source/syntax-vp.csv",
+      "sha256": "e22909d54669372e31a8c06ce0cc2ca54a71c9cef50ab8a04aedaef1a87ec1ee"
+    },
+    "tab_pp_spec": {
+      "schema_version": "tab-pp-spec-v1",
+      "path": "dataset/tab/official/amazon-science-tab-dataset-2e9d70c3/tab_pp_spec.jsonl",
+      "sha256": "04413db81db02e1e88fb87d509502805feece0a99877506930484da6ac80bf8c"
+    },
+    "tab_vp_spec": {
+      "schema_version": "tab-vp-spec-v1",
+      "path": "dataset/tab/official/amazon-science-tab-dataset-2e9d70c3/tab_vp_spec.jsonl",
+      "sha256": "3a61fed4e65e0910b5d17c0e39da786622693b818197ab48d3febaa37bb9f139"
+    }
+  },
+  "selection": {
+    "rules": [
+      "exactly_two_aligned_targets_per_item",
+      "drop_exact_duplicate_rows_keep_first_occurrence",
+      "drop_prompt_collisions_with_different_targets_keep_first_occurrence"
+    ],
+    "excluded_items": [
+      {
+        "tab_id": "tab-vp-034",
+        "reason": "exact_duplicate",
+        "duplicate_of": "tab-vp-028"
+      },
+      {
+        "tab_id": "tab-vp-035",
+        "reason": "exact_duplicate",
+        "duplicate_of": "tab-vp-029"
+      }
+    ]
+  },
+  "files": {
+    "items": {
+      "path": "items.jsonl",
+      "rows": 315,
+      "sha256": "08f3dda8b80bdd9bee800f051387182b158a854d4346b97fec9e9afef6939693"
+    },
+    "independent_seed_manifest": {
+      "path": "independent_seed_manifest.jsonl",
+      "rows": 1260,
+      "sha256": "7451ddad80f1fb24e5f48e14042afe277fc57761f16e8824474b2e2a04d971b3"
+    },
+    "prompt_only": {
+      "path": "prompt_only.jsonl",
+      "rows": 1260,
+      "sha256": "655324cb2745a6d12c5dc0ac499824f5c1c20177de696e03029ee24be89e51f1"
+    }
+  },
+  "clip_token_check": {
+    "status": "checked",
+    "tokenizer": {
+      "model_id": "CompVis/stable-diffusion-v1-4",
+      "revision": "133a221b8aa7292a167afc5127cb63fb5005638b",
+      "subfolder": "tokenizer"
+    },
+    "max_length_limit": 77,
+    "concatenation_template": "{prompt}. {setup}.",
+    "ambiguous_prompt_max_tokens": 14,
+    "concatenated_max_tokens": 26,
+    "all_within_limit": true
+  },
+  "notes": [
+    "Item rows are verbatim copies of the pinned official spec rows; no text is rewritten.",
+    "Hyphenated-participle items (Stage-1 participle detector matches plain -ing tokens only): [\"tab-vp-207\", \"tab-vp-208\", \"tab-vp-209\", \"tab-vp-210\", \"tab-vp-211\", \"tab-vp-212\", \"tab-vp-213\", \"tab-vp-214\", \"tab-vp-223\", \"tab-vp-224\", \"tab-vp-225\", \"tab-vp-226\", \"tab-vp-227\", \"tab-vp-228\", \"tab-vp-229\", \"tab-vp-230\", \"tab-vp-236\", \"tab-vp-237\", \"tab-vp-240\", \"tab-vp-241\"]",
+    "Parse-dependent gates (forced-parse realizability, index differentiation) are applied downstream at endpoint freeze; they reference this dataset id and never rewrite it."
+  ],
+  "usage_rules": [
+    "Arm comparisons are paired on identical (item, seed); seeds 42-45 are used exactly once per item per condition.",
+    "The faithful-image metric follows the ACL 2023 TAB protocol (scripts/analysis/run_tab_vqa.py); the opposite-setup question is diagnostic only.",
+    "Judge comparisons stay inside one judge series; no absolute-accuracy comparison across judges.",
+    "Report per tab_category; do not average PP and VP into one score.",
+    "Any prompt/target/seed change requires a new dataset id or version; never overwrite this directory."
+  ]
+}

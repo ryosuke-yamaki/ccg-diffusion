@@ -1,0 +1,494 @@
+{
+  "categories": [
+    "color",
+    "shape",
+    "texture",
+    "spatial",
+    "3d_spatial",
+    "numeracy",
+    "non_spatial",
+    "complex"
+  ],
+  "compression": {
+    "compresslevel": 9,
+    "format": "gzip",
+    "mtime": 0
+  },
+  "description": "Recorded Stage 1 AUTO, Stage 2 marked dependencies and Stage 2 coverage rows of the eight T2I-CompBench++ categories, as used by every evaluated T2I run.",
+  "files": [
+    {
+      "category": "color",
+      "gz_sha256": "6179ca91485b4e79ded12b28f1b12f7e6cb1a4037cb045fef50248d4a542ca67",
+      "gz_size_bytes": 5106,
+      "kind": "auto",
+      "path": "auto/color.auto.gz",
+      "raw_sha256": "d66bf7742cc598bb5dcc14b18e61ba876e721e54c682ec7bec51a8365c03570b",
+      "raw_size_bytes": 120200,
+      "rows": 300,
+      "sources": [
+        {
+          "field": "source_artifacts",
+          "meta": "output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/color.deps2index_sd14.jsonl.meta.json",
+          "sha256": "d66bf7742cc598bb5dcc14b18e61ba876e721e54c682ec7bec51a8365c03570b"
+        },
+        {
+          "field": "output_auto_sha256",
+          "meta": "output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/color.auto.meta.json",
+          "sha256": "d66bf7742cc598bb5dcc14b18e61ba876e721e54c682ec7bec51a8365c03570b"
+        }
+      ],
+      "stage_path": "color.auto"
+    },
+    {
+      "category": "color",
+      "gz_sha256": "b85ba6e0234dfee50e5e129d6a9b8d8d8587b2ce574b7ab3df21ac8f79cbe97b",
+      "gz_size_bytes": 7242,
+      "kind": "markedup_deps",
+      "path": "markedup_deps/color.markedup_deps.gz",
+      "raw_sha256": "66c83fba5721f0c84911e7f57e5d618379625161e1ef89ce09f45f5e4c2e300c",
+      "raw_size_bytes": 86684,
+      "rows": 300,
+      "sources": [
+        {
+          "field": "source_artifacts",
+          "meta": "output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/color.deps2index_sd14.jsonl.meta.json",
+          "sha256": "66c83fba5721f0c84911e7f57e5d618379625161e1ef89ce09f45f5e4c2e300c"
+        }
+      ],
+      "stage_path": "generate/color.markedup_deps"
+    },
+    {
+      "category": "color",
+      "gz_sha256": "5650f279677d20ef414005201d7b8d5d32aba4bd81597480ecbe42e6bd81ac2a",
+      "gz_size_bytes": 7528,
+      "kind": "coverage_rows",
+      "path": "coverage_rows/color.coverage_rows.jsonl.gz",
+      "raw_sha256": "e1075fa63ae1e19beacf09fafd99879eb0ba2b2eef864855ac7524acd4b3ceda",
+      "raw_size_bytes": 185947,
+      "rows": 300,
+      "sources": [
+        {
+          "field": "source_artifacts",
+          "meta": "output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/color.deps2index_sd14.jsonl.meta.json",
+          "sha256": "e1075fa63ae1e19beacf09fafd99879eb0ba2b2eef864855ac7524acd4b3ceda"
+        }
+      ],
+      "stage_path": "generate/color.coverage_rows.jsonl"
+    },
+    {
+      "category": "shape",
+      "gz_sha256": "f3837baa5c875c132a8ece4eb22e4a53c3fbd80c848c1027467936182cc46fca",
+      "gz_size_bytes": 7858,
+      "kind": "auto",
+      "path": "auto/shape.auto.gz",
+      "raw_sha256": "3044bda187102a77e4d9df47fc1c4c10301acbf96ea2cb23fe19a57456013707",
+      "raw_size_bytes": 136654,
+      "rows": 300,
+      "sources": [
+        {
+          "field": "source_artifacts",
+          "meta": "output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/shape.deps2index_sd14.jsonl.meta.json",
+          "sha256": "3044bda187102a77e4d9df47fc1c4c10301acbf96ea2cb23fe19a57456013707"
+        },
+        {
+          "field": "output_auto_sha256",
+          "meta": "output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/shape.auto.meta.json",
+          "sha256": "3044bda187102a77e4d9df47fc1c4c10301acbf96ea2cb23fe19a57456013707"
+        }
+      ],
+      "stage_path": "shape.auto"
+    },
+    {
+      "category": "shape",
+      "gz_sha256": "0918470a11acc7860944f4654e9d3cad1598ed56150230e78c62059f0f49bcf6",
+      "gz_size_bytes": 12093,
+      "kind": "markedup_deps",
+      "path": "markedup_deps/shape.markedup_deps.gz",
+      "raw_sha256": "a03ce68f6783290520e737b623ec4fea55653fd3ec536848f9a1e46b8ab1f49f",
+      "raw_size_bytes": 104715,
+      "rows": 300,
+      "sources": [
+        {
+          "field": "source_artifacts",
+          "meta": "output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/shape.deps2index_sd14.jsonl.meta.json",
+          "sha256": "a03ce68f6783290520e737b623ec4fea55653fd3ec536848f9a1e46b8ab1f49f"
+        }
+      ],
+      "stage_path": "generate/shape.markedup_deps"
+    },
+    {
+      "category": "shape",
+      "gz_sha256": "d8789154d3484c7ef5c0ce624f7ea6e96d418bff22154805073bedfff2b5299e",
+      "gz_size_bytes": 10301,
+      "kind": "coverage_rows",
+      "path": "coverage_rows/shape.coverage_rows.jsonl.gz",
+      "raw_sha256": "d88fae6ded18094cd021dd5df7a84b58ae2392834753590afd1376e5bf2a805c",
+      "raw_size_bytes": 193027,
+      "rows": 300,
+      "sources": [
+        {
+          "field": "source_artifacts",
+          "meta": "output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/shape.deps2index_sd14.jsonl.meta.json",
+          "sha256": "d88fae6ded18094cd021dd5df7a84b58ae2392834753590afd1376e5bf2a805c"
+        }
+      ],
+      "stage_path": "generate/shape.coverage_rows.jsonl"
+    },
+    {
+      "category": "texture",
+      "gz_sha256": "7c2e52a805dd2ebd1dd5d7e6a250618864578fb1e8de28b3e5111ca7d97a4339",
+      "gz_size_bytes": 5184,
+      "kind": "auto",
+      "path": "auto/texture.auto.gz",
+      "raw_sha256": "e015a8c6aed7c60c7e5466fc93d01ac8bfcd4038f2adc82bd171703741120a8c",
+      "raw_size_bytes": 126925,
+      "rows": 300,
+      "sources": [
+        {
+          "field": "source_artifacts",
+          "meta": "output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/texture.deps2index_sd14.jsonl.meta.json",
+          "sha256": "e015a8c6aed7c60c7e5466fc93d01ac8bfcd4038f2adc82bd171703741120a8c"
+        },
+        {
+          "field": "output_auto_sha256",
+          "meta": "output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/texture.auto.meta.json",
+          "sha256": "e015a8c6aed7c60c7e5466fc93d01ac8bfcd4038f2adc82bd171703741120a8c"
+        }
+      ],
+      "stage_path": "texture.auto"
+    },
+    {
+      "category": "texture",
+      "gz_sha256": "8e16d7390163ec2975965cab0845622a17f49712dbb05c25f87b241da9d1b3c4",
+      "gz_size_bytes": 8982,
+      "kind": "markedup_deps",
+      "path": "markedup_deps/texture.markedup_deps.gz",
+      "raw_sha256": "99260c836bca67a48e55aa79a7f544ed5b498e887787ffd2fb99d90be6657bb4",
+      "raw_size_bytes": 97055,
+      "rows": 300,
+      "sources": [
+        {
+          "field": "source_artifacts",
+          "meta": "output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/texture.deps2index_sd14.jsonl.meta.json",
+          "sha256": "99260c836bca67a48e55aa79a7f544ed5b498e887787ffd2fb99d90be6657bb4"
+        }
+      ],
+      "stage_path": "generate/texture.markedup_deps"
+    },
+    {
+      "category": "texture",
+      "gz_sha256": "91229796ae82706b4460e7824a20cc8ad55b21031a10005267bc8206b8aa8f9d",
+      "gz_size_bytes": 7949,
+      "kind": "coverage_rows",
+      "path": "coverage_rows/texture.coverage_rows.jsonl.gz",
+      "raw_sha256": "ec8974f2470101866d6259ca21b86d559f6d78035d65e0cd4d3fc1b10d8c2dfb",
+      "raw_size_bytes": 191805,
+      "rows": 300,
+      "sources": [
+        {
+          "field": "source_artifacts",
+          "meta": "output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/texture.deps2index_sd14.jsonl.meta.json",
+          "sha256": "ec8974f2470101866d6259ca21b86d559f6d78035d65e0cd4d3fc1b10d8c2dfb"
+        }
+      ],
+      "stage_path": "generate/texture.coverage_rows.jsonl"
+    },
+    {
+      "category": "spatial",
+      "gz_sha256": "6d36aa2b0c28785efd7d617377318211456126d048749f32215e0942952a1d3f",
+      "gz_size_bytes": 3391,
+      "kind": "auto",
+      "path": "auto/spatial.auto.gz",
+      "raw_sha256": "0a86501e4430750287538e90e4c63303b242c7827769225f906e753df220fdf1",
+      "raw_size_bytes": 112095,
+      "rows": 300,
+      "sources": [
+        {
+          "field": "source_artifacts",
+          "meta": "output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/spatial.deps2index_sd14.jsonl.meta.json",
+          "sha256": "0a86501e4430750287538e90e4c63303b242c7827769225f906e753df220fdf1"
+        },
+        {
+          "field": "output_auto_sha256",
+          "meta": "output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/spatial.auto.meta.json",
+          "sha256": "0a86501e4430750287538e90e4c63303b242c7827769225f906e753df220fdf1"
+        }
+      ],
+      "stage_path": "spatial.auto"
+    },
+    {
+      "category": "spatial",
+      "gz_sha256": "75083d541c5d21fb128e5adb0f8996717a205f6390cc12acd128619a05aa9ecb",
+      "gz_size_bytes": 3720,
+      "kind": "markedup_deps",
+      "path": "markedup_deps/spatial.markedup_deps.gz",
+      "raw_sha256": "36d01a3f0458a24a40cd61b677e95b32a59b55186fc3340ac9bc2150b31ed5a2",
+      "raw_size_bytes": 90046,
+      "rows": 300,
+      "sources": [
+        {
+          "field": "source_artifacts",
+          "meta": "output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/spatial.deps2index_sd14.jsonl.meta.json",
+          "sha256": "36d01a3f0458a24a40cd61b677e95b32a59b55186fc3340ac9bc2150b31ed5a2"
+        }
+      ],
+      "stage_path": "generate/spatial.markedup_deps"
+    },
+    {
+      "category": "spatial",
+      "gz_sha256": "08f3764b32789a48a4d4179641507d896645f3e4ac8b435f3e1db9fad1462a1a",
+      "gz_size_bytes": 6295,
+      "kind": "coverage_rows",
+      "path": "coverage_rows/spatial.coverage_rows.jsonl.gz",
+      "raw_sha256": "d5fc91f134c0703620dcacfa91476bc49a3c4eaddffa756002dc78cd0b40e105",
+      "raw_size_bytes": 179699,
+      "rows": 300,
+      "sources": [
+        {
+          "field": "source_artifacts",
+          "meta": "output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/spatial.deps2index_sd14.jsonl.meta.json",
+          "sha256": "d5fc91f134c0703620dcacfa91476bc49a3c4eaddffa756002dc78cd0b40e105"
+        }
+      ],
+      "stage_path": "generate/spatial.coverage_rows.jsonl"
+    },
+    {
+      "category": "3d_spatial",
+      "gz_sha256": "7253d5c876b40b70979f1b83a472b28c6d8371cd836ccbc27d3bea348f3ca8ac",
+      "gz_size_bytes": 3185,
+      "kind": "auto",
+      "path": "auto/3d_spatial.auto.gz",
+      "raw_sha256": "a1083e29e321a1c8024d41481edc48136afbb9e829ae46328b060fba99e36bf9",
+      "raw_size_bytes": 100282,
+      "rows": 300,
+      "sources": [
+        {
+          "field": "source_artifacts",
+          "meta": "output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/3d_spatial.deps2index_sd14.jsonl.meta.json",
+          "sha256": "a1083e29e321a1c8024d41481edc48136afbb9e829ae46328b060fba99e36bf9"
+        },
+        {
+          "field": "output_auto_sha256",
+          "meta": "output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/3d_spatial.auto.meta.json",
+          "sha256": "a1083e29e321a1c8024d41481edc48136afbb9e829ae46328b060fba99e36bf9"
+        }
+      ],
+      "stage_path": "3d_spatial.auto"
+    },
+    {
+      "category": "3d_spatial",
+      "gz_sha256": "40821d910856b618915dcec271533b1f1b4ffb66182a490e9ca8fbe058165115",
+      "gz_size_bytes": 3871,
+      "kind": "markedup_deps",
+      "path": "markedup_deps/3d_spatial.markedup_deps.gz",
+      "raw_sha256": "e8726b631b40a9764e15093c473dab73dfaf4768172f4d8c3bc2508d5359c7cc",
+      "raw_size_bytes": 77333,
+      "rows": 300,
+      "sources": [
+        {
+          "field": "source_artifacts",
+          "meta": "output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/3d_spatial.deps2index_sd14.jsonl.meta.json",
+          "sha256": "e8726b631b40a9764e15093c473dab73dfaf4768172f4d8c3bc2508d5359c7cc"
+        }
+      ],
+      "stage_path": "generate/3d_spatial.markedup_deps"
+    },
+    {
+      "category": "3d_spatial",
+      "gz_sha256": "cf9e62f052a50e37e1d7bb422a7f95e4534b9a48b5a27cd057dab89ac9c617d0",
+      "gz_size_bytes": 6207,
+      "kind": "coverage_rows",
+      "path": "coverage_rows/3d_spatial.coverage_rows.jsonl.gz",
+      "raw_sha256": "174cd102f6aeb5f6e4007020271e5dc4605269ddc3fc8d5c63392e8ec55f2116",
+      "raw_size_bytes": 181336,
+      "rows": 300,
+      "sources": [
+        {
+          "field": "source_artifacts",
+          "meta": "output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/3d_spatial.deps2index_sd14.jsonl.meta.json",
+          "sha256": "174cd102f6aeb5f6e4007020271e5dc4605269ddc3fc8d5c63392e8ec55f2116"
+        }
+      ],
+      "stage_path": "generate/3d_spatial.coverage_rows.jsonl"
+    },
+    {
+      "category": "numeracy",
+      "gz_sha256": "e356071e26e5001ee6056d11b4d46e93f04a5ea67ac7bdeeedab32228301cad8",
+      "gz_size_bytes": 5971,
+      "kind": "auto",
+      "path": "auto/numeracy.auto.gz",
+      "raw_sha256": "2bb3caa1426321dcf4d104a396cbb40503111ab7c3949f7928667b23876b4281",
+      "raw_size_bytes": 107720,
+      "rows": 300,
+      "sources": [
+        {
+          "field": "source_artifacts",
+          "meta": "output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/numeracy.deps2index_sd14.jsonl.meta.json",
+          "sha256": "2bb3caa1426321dcf4d104a396cbb40503111ab7c3949f7928667b23876b4281"
+        },
+        {
+          "field": "output_auto_sha256",
+          "meta": "output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/numeracy.auto.meta.json",
+          "sha256": "2bb3caa1426321dcf4d104a396cbb40503111ab7c3949f7928667b23876b4281"
+        }
+      ],
+      "stage_path": "numeracy.auto"
+    },
+    {
+      "category": "numeracy",
+      "gz_sha256": "afd3079e4b4ed20786a5e9a8f155393d42a9b11ebb54d821a458267e9e4d5f18",
+      "gz_size_bytes": 9740,
+      "kind": "markedup_deps",
+      "path": "markedup_deps/numeracy.markedup_deps.gz",
+      "raw_sha256": "c839a272fa938105ee0fd50e3fb8981a20c56dd1b4ed7bb99da0a249e08747f3",
+      "raw_size_bytes": 74604,
+      "rows": 300,
+      "sources": [
+        {
+          "field": "source_artifacts",
+          "meta": "output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/numeracy.deps2index_sd14.jsonl.meta.json",
+          "sha256": "c839a272fa938105ee0fd50e3fb8981a20c56dd1b4ed7bb99da0a249e08747f3"
+        }
+      ],
+      "stage_path": "generate/numeracy.markedup_deps"
+    },
+    {
+      "category": "numeracy",
+      "gz_sha256": "fb924665616d52d6de63dbbd02ea6c28f89056218cea8ca9848e32bc52a5b5b5",
+      "gz_size_bytes": 9662,
+      "kind": "coverage_rows",
+      "path": "coverage_rows/numeracy.coverage_rows.jsonl.gz",
+      "raw_sha256": "8cd153854cb7aafa2e6f87f0786cc529ae0a583b3cfc8a3f0890c0d2a6adbb20",
+      "raw_size_bytes": 192436,
+      "rows": 300,
+      "sources": [
+        {
+          "field": "source_artifacts",
+          "meta": "output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/numeracy.deps2index_sd14.jsonl.meta.json",
+          "sha256": "8cd153854cb7aafa2e6f87f0786cc529ae0a583b3cfc8a3f0890c0d2a6adbb20"
+        }
+      ],
+      "stage_path": "generate/numeracy.coverage_rows.jsonl"
+    },
+    {
+      "category": "non_spatial",
+      "gz_sha256": "6346279a0049eadca28b74b7dddbc99bbbed68ddd48483208d30093c6157ea34",
+      "gz_size_bytes": 12157,
+      "kind": "auto",
+      "path": "auto/non_spatial.auto.gz",
+      "raw_sha256": "40af6da604e0dabbb9f364f4f531b11b01ba33940b96db88e8d26b13da1ffadf",
+      "raw_size_bytes": 209087,
+      "rows": 300,
+      "sources": [
+        {
+          "field": "source_artifacts",
+          "meta": "output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/non_spatial.deps2index_sd14.jsonl.meta.json",
+          "sha256": "40af6da604e0dabbb9f364f4f531b11b01ba33940b96db88e8d26b13da1ffadf"
+        },
+        {
+          "field": "output_auto_sha256",
+          "meta": "output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/non_spatial.auto.meta.json",
+          "sha256": "40af6da604e0dabbb9f364f4f531b11b01ba33940b96db88e8d26b13da1ffadf"
+        }
+      ],
+      "stage_path": "non_spatial.auto"
+    },
+    {
+      "category": "non_spatial",
+      "gz_sha256": "70b01b59003828bb3fb40832b31717ef2b160c8a6c9f1d0bbbe0d4b66a4b45b4",
+      "gz_size_bytes": 20415,
+      "kind": "markedup_deps",
+      "path": "markedup_deps/non_spatial.markedup_deps.gz",
+      "raw_sha256": "37f787017686ddac61c7f16409b982990f146b4457203ba0d07e63ff33dda102",
+      "raw_size_bytes": 234819,
+      "rows": 300,
+      "sources": [
+        {
+          "field": "source_artifacts",
+          "meta": "output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/non_spatial.deps2index_sd14.jsonl.meta.json",
+          "sha256": "37f787017686ddac61c7f16409b982990f146b4457203ba0d07e63ff33dda102"
+        }
+      ],
+      "stage_path": "generate/non_spatial.markedup_deps"
+    },
+    {
+      "category": "non_spatial",
+      "gz_sha256": "c9c2e5384d935ef6357f857f4edd1d647313a39aa3fa68e5f00e884326969a7e",
+      "gz_size_bytes": 13505,
+      "kind": "coverage_rows",
+      "path": "coverage_rows/non_spatial.coverage_rows.jsonl.gz",
+      "raw_sha256": "4575ebad7bdc724a230d01cd0e9492f99cda203050676452f1e1c62a1a623842",
+      "raw_size_bytes": 217813,
+      "rows": 300,
+      "sources": [
+        {
+          "field": "source_artifacts",
+          "meta": "output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/non_spatial.deps2index_sd14.jsonl.meta.json",
+          "sha256": "4575ebad7bdc724a230d01cd0e9492f99cda203050676452f1e1c62a1a623842"
+        }
+      ],
+      "stage_path": "generate/non_spatial.coverage_rows.jsonl"
+    },
+    {
+      "category": "complex",
+      "gz_sha256": "4547976408ad5c593d9140dd4ce94ffc1ddfd7bf9f96c3d9926cdf1eaabe89bc",
+      "gz_size_bytes": 12909,
+      "kind": "auto",
+      "path": "auto/complex.auto.gz",
+      "raw_sha256": "6abd72c81eeab8b7e5885fb5eb637653bd1a1a22609ff91b56a532409e2090b5",
+      "raw_size_bytes": 218232,
+      "rows": 300,
+      "sources": [
+        {
+          "field": "source_artifacts",
+          "meta": "output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/complex.deps2index_sd14.jsonl.meta.json",
+          "sha256": "6abd72c81eeab8b7e5885fb5eb637653bd1a1a22609ff91b56a532409e2090b5"
+        },
+        {
+          "field": "output_auto_sha256",
+          "meta": "output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/complex.auto.meta.json",
+          "sha256": "6abd72c81eeab8b7e5885fb5eb637653bd1a1a22609ff91b56a532409e2090b5"
+        }
+      ],
+      "stage_path": "complex.auto"
+    },
+    {
+      "category": "complex",
+      "gz_sha256": "09bf5227ecae248c2fcb76359243cbc68981a8ce2c7bb2e36ddaf9848893644c",
+      "gz_size_bytes": 21021,
+      "kind": "markedup_deps",
+      "path": "markedup_deps/complex.markedup_deps.gz",
+      "raw_sha256": "80302fb651ec1014e1631c44263c408aa92f17f4efc6d121c6f8f67414843961",
+      "raw_size_bytes": 191084,
+      "rows": 300,
+      "sources": [
+        {
+          "field": "source_artifacts",
+          "meta": "output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/complex.deps2index_sd14.jsonl.meta.json",
+          "sha256": "80302fb651ec1014e1631c44263c408aa92f17f4efc6d121c6f8f67414843961"
+        }
+      ],
+      "stage_path": "generate/complex.markedup_deps"
+    },
+    {
+      "category": "complex",
+      "gz_sha256": "4aa6dd0ad35497edaaab6775e03ba254caefd0a2b8007957d1c77e5439446126",
+      "gz_size_bytes": 14909,
+      "kind": "coverage_rows",
+      "path": "coverage_rows/complex.coverage_rows.jsonl.gz",
+      "raw_sha256": "0c1d13b64aad4baa86304e95d8e36bc218a2add1d20257c0fb8d0139a879b4b3",
+      "raw_size_bytes": 224288,
+      "rows": 300,
+      "sources": [
+        {
+          "field": "source_artifacts",
+          "meta": "output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/complex.deps2index_sd14.jsonl.meta.json",
+          "sha256": "0c1d13b64aad4baa86304e95d8e36bc218a2add1d20257c0fb8d0139a879b4b3"
+        }
+      ],
+      "stage_path": "generate/complex.coverage_rows.jsonl"
+    }
+  ],
+  "schema": "ccg_diffusion.t2i_parse_bundle.v1",
+  "source_dir": "output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123"
+}

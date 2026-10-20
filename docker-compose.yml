@@ -1,0 +1,41 @@
+# Runtime service of CCG Diffusion (docs/installation.md).
+#
+#   cp .env.example .env            # then adjust GPU selection and paths
+#   docker compose build runtime
+#   docker compose run --rm runtime python -m pytest -q
+#   docker compose run --rm runtime python -m scripts.setup.download_models
+#
+# The checkout is mounted at /workspace/${PROJECT_NAME}; models live in the
+# named volume hf-cache, so they survive container re-creation. Optional tooling
+# for coding agents (Claude Code, Codex CLI, MCP servers) is an opt-in overlay:
+# see docker-compose.override.example.yml (copied to the gitignored
+# docker-compose.override.yml, which Compose merges into this file).
+services:
+  runtime:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      target: runtime
+      args:
+        HOST_UID: ${HOST_UID:-1000}
+        HOST_GID: ${HOST_GID:-1000}
+        PROJECT_NAME: ${PROJECT_NAME:-ccg-diffusion}
+    image: ${IMAGE_NAME:-ccg-diffusion:runtime}
+    container_name: ${CONTAINER_NAME:-ccg-diffusion}
+    runtime: nvidia
+    shm_size: ${SHM_SIZE:-64gb}
+    tty: true
+    stdin_open: true
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=${NVIDIA_VISIBLE_DEVICES:-all}
+      - HF_TOKEN=${HF_TOKEN:-}
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+    volumes:
+      - .:/workspace/${PROJECT_NAME:-ccg-diffusion}
+      - ${DATASET_DIR:-./dataset}:/workspace/${PROJECT_NAME:-ccg-diffusion}/dataset
+      - ${OUTPUT_DIR:-./output}:/workspace/${PROJECT_NAME:-ccg-diffusion}/output
+      - hf-cache:/home/devuser/.cache/huggingface
+    working_dir: /workspace/${PROJECT_NAME:-ccg-diffusion}
+
+volumes:
+  hf-cache:

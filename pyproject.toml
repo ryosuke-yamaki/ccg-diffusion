@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ccg-diffusion"
+version = "1.0.0"
+description = "CCG Diffusion: CCG-derived conditioning and attention guidance for text-to-image diffusion"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "Ryosuke Yamaki"}]
+# The runtime pins of docker/requirements.txt. torch and torchvision are installed
+# separately from the CUDA-specific index (see docs/installation.md); the package
+# reads repository files (configs/, data/, dataset/derived/ and the frozen inputs
+# under output/, see docs/data.md), so install it editable:
+#   pip install -e .
+dependencies = [
+    "transformers==5.14.1",
+    "tokenizers==0.22.2",
+    "huggingface_hub==1.24.0",
+    "safetensors>=0.8.0",
+    "numpy==2.5.1",
+    "nltk==3.10.0",
+    "tqdm==4.69.0",
+    "omegaconf==2.3.1",
+    "spacy==3.8.14",
+    "wandb==0.28.1",
+    "diffusers==0.39.0",
+    "accelerate>=1.14",
+    "scipy>=1.16",
+    "hydra-core==1.3.2",
+    "openai==1.71.0",
+    "pydantic==2.10.3",
+    "imageio==2.34.2",
+    "holccg @ git+https://github.com/ryosuke-yamaki/hol-ccg@0213ca85d2397c5a4fb2c03bc1b20cf1a6283d26",
+]
+
+[project.urls]
+Repository = "https://github.com/ryosuke-yamaki/ccg-diffusion"
+
+[project.optional-dependencies]
+dev = ["pytest", "flake8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

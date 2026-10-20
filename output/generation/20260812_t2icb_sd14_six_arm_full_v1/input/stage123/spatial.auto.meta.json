@@ -1,0 +1,28 @@
+{
+  "artifact": "holccg_parse_auto",
+  "created_at_utc": "2026-08-12T10:37:06.256712+00:00",
+  "holccg_version": "1.0.0",
+  "input_raw_path": "/workspace/holsd/output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/spatial.raw",
+  "input_raw_sha256": "bb76dd9862c1f7b11945551fc716b58d592cffab81e3a97e8eef46e5dc878b12",
+  "model_dir": "ryosuke-yamaki/hol-ccg-roberta-large",
+  "output_auto_path": "/workspace/holsd/output/generation/20260812_t2icb_sd14_six_arm_full_v1/input/stage123/spatial.auto",
+  "output_auto_sha256": "0a86501e4430750287538e90e4c63303b242c7827769225f906e753df220fdf1",
+  "parsing": {
+    "apply_skimmer": true,
+    "chunk_size": 1,
+    "grammar": "treebank",
+    "min_rule_freq": 1,
+    "phrase_threshold": 0.001,
+    "span_threshold": 0.001,
+    "stag_threshold": 0.01
+  },
+  "schema_version": 1,
+  "sentence_counts": {
+    "error": 0,
+    "fail": 0,
+    "ok": 300,
+    "overlen": 0,
+    "partial": 0,
+    "total": 300
+  }
+}

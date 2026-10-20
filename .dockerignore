@@ -1,0 +1,4 @@
+# The images copy only files under docker/; everything else (output/ and dataset/
+# hold run artifacts and images) stays out of the build context.
+*
+!docker/

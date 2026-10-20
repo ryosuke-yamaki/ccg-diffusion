@@ -1,0 +1,155 @@
+{
+  "repo": "https://github.com/Karine-Huang/T2I-CompBench",
+  "commit": "1b7094991a57f3c22abdd4f6e8ba6c1a15517073",
+  "retrieved_at": "2026-08-03T14:14:39Z",
+  "clone_path": "external/t2i_compbench/T2I-CompBench",
+  "weights": [
+    {
+      "name": "Unified_learned_OCIM_RS200_6x+2x.pth",
+      "url": "https://huggingface.co/shikunl/prismer/resolve/main/expert_weights/Unified_learned_OCIM_RS200_6x%2B2x.pth",
+      "bytes": 483254220,
+      "sha256": "b19a836811c0d0d7aebf04f83ff4ea1da77ccf57b85cd65819746c1fccbff258",
+      "used_by": "2D_spatial_eval.py (UniDet RS200 detector)",
+      "official_source": true
+    },
+    {
+      "name": "dpt_hybrid-midas-501f0c75.pt",
+      "url": "https://huggingface.co/lllyasviel/ControlNet/resolve/main/annotator/ckpts/dpt_hybrid-midas-501f0c75.pt",
+      "bytes": 492757791,
+      "sha256": "501f0c75b3bca7daec6b3682c5054c09b366765aef6fa3a09d03a5cb4b230853",
+      "used_by": "3D_spatial_eval.py (MiDaS depth expert)",
+      "official_source": true
+    },
+    {
+      "name": "Unified_learned_OCIM_R50_6x+2x.pth",
+      "url": "https://huggingface.co/datasets/nqbinh/misc_upload/resolve/main/Unified_learned_OCIM_R50_6x%2B2x.pth",
+      "bytes": 287883795,
+      "sha256": "630dbe1eb012a8985016b7b8ca96aa7f9db588ac8921604cf9eea81d6c9f6e21",
+      "used_by": "numeracy_eval.py, 3D_spatial_eval.py (UniDet R50 detector)",
+      "official_source": false
+    },
+    {
+      "name": "model_base_vqa_capfilt_large.pth",
+      "url": "https://storage.googleapis.com/sfr-vision-language-research/BLIP/models/model_base_vqa_capfilt_large.pth",
+      "bytes": 1446244375,
+      "sha256": "7a7d546209f1ccfa8b3cd3a0138c53e0d1e95e4a4bc280bef8f67e20fe4925ae",
+      "used_by": "BLIP_vqa.py (disentangled BLIP-VQA judge)",
+      "official_source": true
+    }
+  ],
+  "val_txt": {
+    "color": {
+      "sha256": "1634259756dbc77d13093d907d414480080ec9790a8c97ad09efaea7b2534f2d",
+      "count": 300,
+      "line_ending": "CRLF",
+      "crlf_count": 299,
+      "trailing_newline": false
+    },
+    "shape": {
+      "sha256": "37e1a276906c7ea9516cbd7ac8501be896006c0c17ca7344f260562834455bae",
+      "count": 300,
+      "line_ending": "CRLF",
+      "crlf_count": 300,
+      "trailing_newline": true
+    },
+    "texture": {
+      "sha256": "fbb5363515b4a28009e360afaaaf389d2dd2289e50dbb0c6ef4ea0c7fe4f3d4f",
+      "count": 300,
+      "line_ending": "CRLF",
+      "crlf_count": 299,
+      "trailing_newline": false
+    },
+    "spatial": {
+      "sha256": "8707a1d7e42ce3002d95363cf55f74bd043c843ae27108f5125aaaa7840ca988",
+      "count": 300,
+      "line_ending": "CRLF",
+      "crlf_count": 299,
+      "trailing_newline": false
+    },
+    "3d_spatial": {
+      "sha256": "c9953597315f36a5fcb41291bb19bdc6ab5f64a0fa760d691b4854a73f5d1fe9",
+      "count": 300,
+      "line_ending": "LF",
+      "crlf_count": 0,
+      "trailing_newline": false
+    },
+    "non_spatial": {
+      "sha256": "04c56cc9ac441dc9ea6c5157652058bd1635b5308526dd31bb29a1caab9a758d",
+      "count": 300,
+      "line_ending": "CRLF",
+      "crlf_count": 300,
+      "trailing_newline": true
+    },
+    "complex": {
+      "sha256": "1b808018b8d9916db3d47d5aa2ef18377a3549a56901a474156f799824cdf3b4",
+      "count": 300,
+      "line_ending": "CRLF",
+      "crlf_count": 299,
+      "trailing_newline": false
+    },
+    "numeracy": {
+      "sha256": "dad8df141604b70ba7554bec724e3db0a80023680769b5c514854ea2d2527bbe",
+      "count": 300,
+      "line_ending": "LF",
+      "crlf_count": 0,
+      "trailing_newline": false
+    }
+  },
+  "venv": {
+    "path": "external/t2i_compbench/.venv",
+    "interpreter": "external/t2i_compbench/.venv/bin/python",
+    "launch_requirement": "Do not invoke this interpreter bare. PYTHONPATH must be unset and the container's LD_LIBRARY_PATH must be dropped or stripped of /usr/local/lib/python3.12/dist-packages/torch/lib; otherwise it loads holsd's torch 2.13 libtorch_python.so and aborts with 'ImportError: undefined symbol: PyObject_CallOneArg'. Use scripts.setup.setup_t2i_compbench.eval_venv_env(), or 'env -u PYTHONPATH -u LD_LIBRARY_PATH <interpreter>'.",
+    "launch_env_kept_library_paths": [
+      "/usr/local/cuda/compat/lib",
+      "/usr/local/nvidia/lib",
+      "/usr/local/nvidia/lib64"
+    ],
+    "python_version": "3.10.20",
+    "torch": "2.0.1+cu118",
+    "torchvision": "0.15.2+cu118",
+    "torch_cuda": "11.8",
+    "detectron2": "0.6",
+    "detectron2_commit": "5aeb252b194b93dc2879b4ac34bc51a31b5aee13",
+    "detectron2_build": "CPU extension (CUDA_VISIBLE_DEVICES='' FORCE_CUDA=0)",
+    "transformers": "4.30.2",
+    "timm": "0.4.12",
+    "spacy": "3.5.3",
+    "numpy": "1.25.0",
+    "opencv": "4.7.0",
+    "diffusers": "0.15.0",
+    "accelerate": "0.17.0",
+    "freeze_sha256": "7ea3180e216b61059c29b18c535a96f76a88ca0fdffbd971203ca6a7e89772b2"
+  },
+  "deviations": [
+    {
+      "item": "opencv-python",
+      "official": "opencv-python==4.7.0.72",
+      "installed": "opencv-python-headless==4.7.0.72",
+      "reason": "opencv-python needs libGL.so.1; this container has no root to install it. Same OpenCV version, headless wheel. The eval path uses decode/resize only."
+    },
+    {
+      "item": "detectron2 build",
+      "official": "git+https://github.com/facebookresearch/detectron2.git@5aeb252b194b93dc2879b4ac34bc51a31b5aee13 (default CUDA extension)",
+      "installed": "same commit, CPU extension build (CUDA_VISIBLE_DEVICES='' FORCE_CUDA=0)",
+      "reason": "System nvcc is 12.6 while torch is cu118, so a CUDA extension build fails torch's _check_cuda_version. UniDet's RS200/R50 configs set no DEFORM_ON_PER_STAGE, so no deformable-conv CUDA kernel is reached; ROIAlign/NMS come from torchvision and still run on GPU."
+    },
+    {
+      "item": "setuptools",
+      "official": "unpinned (implicit build dependency)",
+      "installed": "setuptools==69.5.1",
+      "reason": "torch 2.0.1's cpp_extension imports pkg_resources, removed in setuptools>=81. Build-time only; no runtime pin is affected."
+    },
+    {
+      "item": "Unified_learned_OCIM_R50_6x+2x.pth source",
+      "official": "gdown https://docs.google.com/uc?id=1C4sgkirmgMumKXXiLOPmCKNTZAc3oVbq",
+      "installed": "huggingface.co/datasets/nqbinh/misc_upload (byte- and sha256-verified)",
+      "reason": "The official Google Drive id refuses anonymous access, and shikunl/prismer hosts only the RS200 weight. The mirror is pinned by sha256 and was checked to load into the official R50 config with no missing or mismatched keys."
+    },
+    {
+      "item": "word2number",
+      "official": "absent from requirements.txt",
+      "installed": "word2number==1.1",
+      "reason": "numeracy_eval.py imports it; the official requirements omit it."
+    }
+  ]
+}

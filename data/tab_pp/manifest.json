@@ -1,0 +1,72 @@
+{
+  "builder": {
+    "git_commit": "a3d2591d8f8fca0c9129fecaff44f255831ace34",
+    "script": "scripts/maintainer/build_tab_pp_bundle.py"
+  },
+  "files": {
+    "interpretations.jsonl.gz": {
+      "gzip_sha256": "3f9c7c41f19a9f3a65a651379f7fc2d8f787a64f02a93bc45b5931e1551b17f4",
+      "rows": 148,
+      "sha256": "0f5b8474912d3eac2b0b361060ea42e4d35d8391aa880c4d2ba39e760c7f08e2"
+    },
+    "reference.json": {
+      "sha256": "ff30de526d3906ade7b09ab974de1074912169032c27870bb20ced77b5a3010d"
+    },
+    "source_jobs.jsonl.gz": {
+      "gzip_sha256": "013707510e66f02f3f69f199ad10e4badb1bbad78935d74ac95effaa0c9a3ed3",
+      "rows": 3150,
+      "sha256": "9c47ee19c0444b11bd033c775ac259f82eec1476dce3939226ecb58b6ce33ea3"
+    }
+  },
+  "schema": "ccg_diffusion.tab_pp_bundle.v1",
+  "sources": [
+    {
+      "path": "output/generation/20260907_tab_pp_followup2_full/jobs.jsonl",
+      "role": "source_jobs",
+      "sha256": "d9ba8ea34e72b692914af9f3ad7872443580b3463ff4e1c2bafe8714f9ce4398",
+      "tracked": false
+    },
+    {
+      "path": "output/generation/20260907_tab_pp_followup2_full/plan.json",
+      "role": "determinism",
+      "sha256": "5a234d7af2c5df9fde119e912f0517e6c714a800daa5b212e3e113907d55cfcf",
+      "tracked": false
+    },
+    {
+      "path": "output/generation/20260906_tab_ppvp_step5_full/prepared/metadata_transformation_trace.jsonl",
+      "role": "paraphrase",
+      "sha256": "7071bd5b6fe168971fdbdf940673d715cc5404a2c5444882895bed579695ac66",
+      "tracked": true
+    },
+    {
+      "path": "output/generation/20260919_sana_tab_pp_v1/source_audit/reading_results.jsonl",
+      "role": "guidance_targets",
+      "sha256": "17aacd69d45e2389de8b5aef05608d6803fb2ffc729e46faad61561bd75b7f35",
+      "tracked": false
+    },
+    {
+      "path": "output/analysis/tab_ppvp_stage3_differentiation_v4/rows.jsonl",
+      "role": "preposition_and_standard_program",
+      "sha256": "a8738156f2d1c75ff18b6297039ae69c2a813e155a0737d561034b33f10dec18",
+      "tracked": true
+    },
+    {
+      "path": "output/generation/20260925_sd14_tab_pp_ablation_v1/metadata_jobs.jsonl",
+      "role": "evaluated_sd14_jobs",
+      "sha256": "53e656facb334a267f7087ea4f3c7379ed70bc46552c75ebc928cc82dbcd3f61",
+      "tracked": false
+    },
+    {
+      "path": "output/generation/20260925_sd14_tab_pp_ablation_v1/plan.json",
+      "role": "evaluated_sd14_plan",
+      "sha256": "71e688c18af0fa89037ecbd43651548c86047bcffbf50b9f780f18821055a4d4",
+      "tracked": false
+    },
+    {
+      "path": "dataset/derived/tab/tab-ppvp-disambiguation-v1/items.jsonl",
+      "role": "dataset_items",
+      "sha256": "08f3dda8b80bdd9bee800f051387182b158a854d4346b97fec9e9afef6939693",
+      "tracked": true
+    }
+  ]
+}
